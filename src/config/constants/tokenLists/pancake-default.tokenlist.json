@@ -1,0 +1,30 @@
+{
+  "name": "Dexfinity Default List",
+  "timestamp": "2022-01-26T11:45:09Z",
+  "version": {
+    "major": 4,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://pancakeswap.finance/logo.png",
+  "keywords": ["pancake", "default"],
+  "tokens": [
+    {
+      "chainId": 61406,
+      "address": "0xA62AA87A764F1e300721e80DB1a3B1BC71271b51",
+      "name": "Wrapped KEC",
+      "symbol": "WKEC",
+      "decimals": 18,
+      "logoURI": "/images/61406/tokens/0xA62AA87A764F1e300721e80DB1a3B1BC71271b51.png"
+    },
+    {
+      "chainId": 61406,
+      "address": "0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6",
+      "name": "Chalybs Token",
+      "symbol": "CHL",
+      "decimals": 18,
+      "logoURI": "/images/61406/tokens/0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6.png"
+    }
+  ]
+}
