@@ -199,7 +199,7 @@ export default function Swap() {
 
   return (
     <Page>
-      <BottomDrawer
+      {/* <BottomDrawer
         content={
           <StyledPriceChart
             height='100%'
@@ -214,9 +214,9 @@ export default function Swap() {
         }
         isOpen={isChartDisplayed}
         setIsOpen={setIsChartDisplayed}
-      />
+      /> */}
       <Flex justifyContent="center">
-        {isDesktop && isChartDisplayed && <Flex
+        {/* {isDesktop && isChartDisplayed && <Flex
           width="100%"
           mr="20px"
           flexDirection="column"
@@ -238,7 +238,7 @@ export default function Swap() {
             </StyledPriceChart>
           }
           </Flex>
-        }
+        } */}
         <Box minWidth="464px">
           <Flex justifyContent="center" mt="40px">
             <AppBody>
