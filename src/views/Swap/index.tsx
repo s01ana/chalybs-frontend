@@ -239,7 +239,7 @@ export default function Swap() {
           }
           </Flex>
         } */}
-        <Box minWidth="464px">
+        <Box minWidth={isMobile ? "100%" : "464px"}>
           <Flex justifyContent="center" mt="40px">
             <AppBody>
               <CurrencyInputHeader
