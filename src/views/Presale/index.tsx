@@ -202,7 +202,7 @@ const Presale = () => {
                       "https://x.com/xdexfinity",
                       "https://t.me/DexfinityFinance",
                       "https://discord.gg/ySugAwJD7D",
-                      "https://docs.dexfinity.finance"
+                      "https://docs.chalybs.net"
                     ]} />
                   </Box>
                 </Flex>
@@ -221,7 +221,7 @@ const Presale = () => {
                     {`
                       Step into the future of decentralized finance with Dexfinity, a pioneering platform built on the Bitfinity Network. 
                       As the glow of innovation illuminates the horizon, Dexfinity stands at the forefront, offering a transformative decentralized exchange and launchpad poised to revolutionize the DeFi landscape.
-                      At the heart of the Dexfinity ecosystem lies DEF, the main token that powers the platform.
+                      At the heart of the Dexfinity ecosystem lies CHL, the main token that powers the platform.
                     `}
                   </Text>
                 </Box>
@@ -250,7 +250,7 @@ const Presale = () => {
                   <Divider />
                   <Flex width="100%" justifyContent="space-between" px="5px" mb="10px">
                     <Text small>Token Symbol</Text>
-                    <Text small>DEF</Text>
+                    <Text small>CHL</Text>
                   </Flex>
                   <Divider />
                   <Flex width="100%" justifyContent="space-between" px="5px" mb="10px">
@@ -276,17 +276,17 @@ const Presale = () => {
                   <Divider />
                   <Flex width="100%" justifyContent="space-between" px="5px" mb="10px">
                     <Text small>Total Supply</Text>
-                    <Text small>{tokenSupply?.toExact()} DEF</Text>
+                    <Text small>{tokenSupply?.toExact()} CHL</Text>
                   </Flex>
                   <Divider />
                   <Flex width="100%" justifyContent="space-between" px="5px" mb="10px">
                     <Text small>Presale Rate</Text>
-                    <Text small>1 DEF = 9 BTF</Text>
+                    <Text small>1 CHL = 9 BTF</Text>
                   </Flex>
                   <Divider />
                   <Flex width="100%" justifyContent="space-between" px="5px" mb="10px">
                     <Text small>Listing Rate</Text>
-                    <Text small>1 DEF = 10 BTF</Text>
+                    <Text small>1 CHL = 10 BTF</Text>
                   </Flex>
                   <Divider />
                   <Flex width="100%" justifyContent="space-between" px="5px" mb="10px">

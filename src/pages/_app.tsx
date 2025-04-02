@@ -18,7 +18,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { PersistGate } from 'redux-persist/integration/react'
 import $ from 'jquery'
-import { Analytics } from '@vercel/analytics/next';
 import { persistor, useStore } from 'state'
 import { usePollBlockNumber } from 'state/block/hooks'
 import { Updaters } from '..'
@@ -83,7 +82,7 @@ function MyApp(props: AppProps<{ initialReduxState: any; dehydratedState: any }>
         />
         <meta
           name="description"
-          content="Discover DEF, the leading DEX on Bitfinity Network with the best rewarding in DeFi."
+          content="Discover CHL, the leading DEX on Bitfinity Network with the best rewarding in DeFi."
         />
         <meta name="theme-color" content="#1FC7D4" />
         {(Component as NextPageWithLayout).mp && (
@@ -121,7 +120,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         `,
         }}
       />
-      <Analytics />
     </>
   )
 }

@@ -2,6 +2,7 @@ import { Store } from '@reduxjs/toolkit'
 import { HydrationBoundary, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { MatchBreakpointsProvider, ToastsProvider } from 'contexts'
 import { HistoryManagerProvider } from 'contexts/HistoryContext'
+import { RefreshContextProvider } from 'contexts/RefreshContext'
 import { ModalProvider } from 'widgets/Modal'
 import { ThemeProvider as NextThemeProvider, useTheme as useNextTheme } from 'next-themes'
 import { Provider } from 'react-redux'
@@ -28,7 +29,9 @@ const Providers: React.FC<
                 <MatchBreakpointsProvider>
                   <ToastsProvider>
                     <HistoryManagerProvider>
-                      <ModalProvider>{children}</ModalProvider>
+                      <RefreshContextProvider>
+                        <ModalProvider>{children}</ModalProvider>
+                      </RefreshContextProvider>
                     </HistoryManagerProvider>
                   </ToastsProvider>
                 </MatchBreakpointsProvider>

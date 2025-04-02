@@ -150,7 +150,7 @@ const Row: React.FunctionComponent<React.PropsWithChildren<RowPropsWithLoading>>
                       <CellLayout label='Pending Reward'>
                         <Text bold style={{ display: 'flex', alignItems: 'center' }}>
                           {props?.vault?.userData?.pendingReward ? (
-                            `${new BigNumber(props?.vault?.userData?.pendingReward).toFixed(2, BigNumber.ROUND_DOWN)} DEF`
+                            `${new BigNumber(props?.vault?.userData?.pendingReward).toFixed(2, BigNumber.ROUND_DOWN)} CHL`
                           ) : (
                             <Skeleton height={24} width={80} />
                           )}
@@ -243,7 +243,7 @@ const Row: React.FunctionComponent<React.PropsWithChildren<RowPropsWithLoading>>
               <CellLayout label='Pending Bond'>
                 <Text bold style={{ display: 'flex', alignItems: 'center' }}>
                   {props?.vault?.userData?.pendingReward ? (
-                    `${new BigNumber(props?.vault?.userData?.pendingReward).toFixed(2, BigNumber.ROUND_DOWN)} DEF`
+                    `${new BigNumber(props?.vault?.userData?.pendingReward).toFixed(2, BigNumber.ROUND_DOWN)} CHL`
                   ) : (
                     <Skeleton height={24} width={80} />
                   )}

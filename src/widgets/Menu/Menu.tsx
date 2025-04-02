@@ -173,9 +173,6 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                 <AtomBox display={{ xs: "block", md: "none" }}>
                   <TopMenuItems items={mobileLinks} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
                 </AtomBox>
-                <AtomBox mr="20px" display={{ xs: "none", lg: "block" }}>
-                  <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
-                </AtomBox>
               </Flex>
               <Flex alignItems="center" height="100%">
                 {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
@@ -184,7 +181,10 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                     <w3m-network-button />
                   </Box>
                 </AtomBox> */}
-                {rightSide}
+                <AtomBox mr="20px" display={{ xs: "none", lg: "block" }}>
+                  <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
+                </AtomBox>
+                <>{rightSide}</>
               </Flex>
             </StyledNav>
           </FixedContainer>
@@ -203,7 +203,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
               activeSubItem={activeSubItem}
             /> */}
             <Inner isPushed={isPushed} showMenu={showMenu}>
-              {children}
+              <>{children}</>
             </Inner>
             {/* <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" /> */}
           </BodyWrapper>

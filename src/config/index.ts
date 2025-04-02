@@ -2,7 +2,7 @@ import { getFullDecimalMultiplier } from 'utils/getFullDecimalMultiplier'
 
 export const SECONDS_PER_DAY = 60 * 60 * 24
 export const SECONDS_PER_YEAR = SECONDS_PER_DAY * 365 // 10512000
-export const BASE_URL = 'https://dexfinity.finance'
+export const BASE_URL = 'https://chalybs.net'
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_URL}/add`
 export const DEFAULT_TOKEN_DECIMAL = getFullDecimalMultiplier(18)
 export const DEFAULT_GAS_LIMIT = 1600000

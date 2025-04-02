@@ -91,7 +91,7 @@ export default function SwapModalFooter({
         <RowBetween>
           <RowFixed>
             <QuestionToolTip
-              text="Fees are applied to ensure the best experience with Dexfinity, and have already been factored into this quote."
+              text="Fees are applied to ensure the best experience with Chalybs, and have already been factored into this quote."
               placement="right-end"
             >
               <Text fontSize="14px" color="textSubtle">

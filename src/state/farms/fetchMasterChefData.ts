@@ -26,7 +26,7 @@ export const fetchMasterChefTokenPerTime = async (chainId: number) => {
     const client = publicClient({chainId})
     const gtokenPerTime = await client.readContract({
       abi: masterChefABI,
-      functionName: 'defPerTime',
+      functionName: 'chlPerSecond',
       address: getMasterChefAddress(chainId),
     })
 

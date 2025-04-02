@@ -15,4 +15,4 @@ export const NO_PROXY_CONTRACT = '0x0000000000000000000000000000000000000000'
 // Gelato uses this address to define a native currency in all chains
 export const GELATO_NATIVE = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
 
-export const EXCHANGE_HELP_URLS = 'https://docs.dexfinity.finance'
+export const EXCHANGE_HELP_URLS = 'https://docs.chalybs.net'

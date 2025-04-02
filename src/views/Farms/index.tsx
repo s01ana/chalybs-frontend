@@ -165,6 +165,7 @@ const Farms = () => {
         }
 
         const totalLiquidity = farm.isTokenOnly ? new BigNumber(farm.lpTotalInQuoteToken).times(farm.tokenPriceBusd ?? 0) : new BigNumber(farm.lpTotalInQuoteToken).times(farm.quoteTokenPriceBusd)
+
         const { cakeRewardsApr, lpRewardsApr } = isActive
           ? getFarmApr(
               chainId,
@@ -323,9 +324,9 @@ const Farms = () => {
           </Flex>
         )}
         {poolLength ? <div ref={observerRef} /> : <></>}
-        <Flex justifyContent="center" mt="20px">
+        {/* <Flex justifyContent="center" mt="20px">
           <Text color="textDisabled">COMING SOON</Text>
-        </Flex>
+        </Flex> */}
       </Page>
     </FarmsContext.Provider>
   )

@@ -33,10 +33,10 @@ const NotFound = ({
     <>
       {children}
       <StyledNotFound>
-        <img src="/images/logo.png" alt="logo" />
+        <img src="/images/logo.png" alt="logo" width="300px" />
         <Text fontSize="56px">{statusCode}</Text>
         <Text mb="16px">Oops, page not found.</Text>
-        {linkElement}
+        <>{linkElement}</>
       </StyledNotFound>
     </>
   );

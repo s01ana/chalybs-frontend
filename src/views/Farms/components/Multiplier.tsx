@@ -38,15 +38,15 @@ const Multiplier: React.FunctionComponent<React.PropsWithChildren<FarmTableMulti
         <>
           <Text small>
             {isTokenOnly ? 
-              "The Multiplier represents the proportion of DEF rewards each pool receives, as a proportion of the DEF produced each second."
+              "The Multiplier represents the proportion of CHL rewards each pool receives, as a proportion of the CHL produced each second."
              : 
-              "The Multiplier represents the proportion of DEF rewards each farm receives, as a proportion of the DEF produced each second."
+              "The Multiplier represents the proportion of CHL rewards each farm receives, as a proportion of the CHL produced each second."
             }
           </Text>
           <Text my="24px" small>
             {" "}
-            {isTokenOnly ? "For example, if a 1x pool received 1 DEF per second, a 40x pool would receive 40 DEF per second."
-             : "For example, if a 1x farm received 1 DEF per second, a 40x farm would receive 40 DEF per second."}
+            {isTokenOnly ? "For example, if a 1x pool received 1 CHL per second, a 40x pool would receive 40 CHL per second."
+             : "For example, if a 1x farm received 1 CHL per second, a 40x farm would receive 40 CHL per second."}
           </Text>
           <Text small>{isTokenOnly ? "This amount is already included in all APR calculations for the pool." : 
           "This amount is already included in all APR calculations for the farm."}</Text>
@@ -55,15 +55,15 @@ const Multiplier: React.FunctionComponent<React.PropsWithChildren<FarmTableMulti
         <>
           <Text small>
             {isTokenOnly ? 
-              "The Multiplier represents the proportion of DEF rewards each pool receives, as a proportion of the DEF produced each block."
+              "The Multiplier represents the proportion of CHL rewards each pool receives, as a proportion of the CHL produced each block."
             :
-              "The Multiplier represents the proportion of DEF rewards each farm receives, as a proportion of the DEF produced each block."
+              "The Multiplier represents the proportion of CHL rewards each farm receives, as a proportion of the CHL produced each block."
             }
           </Text>
           <Text my="24px" small>
             {" "}
-            {isTokenOnly ? "For example, if a 1x pool received 1 DEF per block, a 40x pool would receive 40 DEF per block.":
-            "For example, if a 1x pool received 1 DEF per block, a 40x pool would receive 40 DEF per block."}
+            {isTokenOnly ? "For example, if a 1x pool received 1 CHL per block, a 40x pool would receive 40 CHL per block.":
+            "For example, if a 1x pool received 1 CHL per block, a 40x pool would receive 40 CHL per block."}
           </Text>
         </>
       )}

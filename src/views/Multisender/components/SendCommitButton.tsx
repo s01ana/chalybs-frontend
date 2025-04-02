@@ -174,9 +174,9 @@ export default function SendCommitButton<SendTransactionReturnType>({
                 Enabling <CircleLoader stroke="white" />
               </AutoRow>
             ) : approvalSubmittedForFee && approvedForFee ? (
-              'DEF Enabled'
+              'CHL Enabled'
             ) : (
-              "Enable DEF"
+              "Enable CHL"
             )}
           </CommitButton>} */}
         </StyledFlex>

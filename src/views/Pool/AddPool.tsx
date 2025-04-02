@@ -384,8 +384,8 @@ export default function AddLiquidity({ currencyA, currencyB }) {
                     {showFieldAApproval && (
                       <Button
                         onClick={approveACallback}
-                        // disabled={approvalA === ApprovalState.PENDING}   // after presale
-                        disabled
+                        disabled={approvalA === ApprovalState.PENDING}   // after presale
+                        // disabled
                         width="100%"
                         height="58px"
                         variant='secondary'
@@ -400,8 +400,8 @@ export default function AddLiquidity({ currencyA, currencyB }) {
                     {showFieldBApproval && (
                       <Button
                         onClick={approveBCallback}
-                        // disabled={approvalB === ApprovalState.PENDING} // after presale
-                        disabled
+                        disabled={approvalB === ApprovalState.PENDING} // after presale
+                        // disabled
                         width="100%"
                         height="58px"
                         variant='secondary'
@@ -429,7 +429,7 @@ export default function AddLiquidity({ currencyA, currencyB }) {
                   // disabled
                   height="58px"
                 >
-                  {errorText || 'Supply'} AFTER PRESALE
+                  {errorText || 'Supply'}
                   {/* COMING SOON */}
                 </CommitButton>
               </AutoColumn>

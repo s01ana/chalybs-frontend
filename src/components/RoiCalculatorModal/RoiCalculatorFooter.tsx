@@ -74,18 +74,18 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
       {rewardCakePerSecond ? (
         <>
           <Text small>
-            The Multiplier represents the proportion of Dexfinity rewards each farm receives, as a proportion of the Dexfinity produced each second.
+            The Multiplier represents the proportion of Chalybs rewards each farm receives, as a proportion of the Chalybs produced each second.
           </Text>
           <Text my="24px" small>
             {" "}
-            For example, if a 1x farm received 1 DEF per second, a 40x farm would receive 40 DEF per second.
+            For example, if a 1x farm received 1 CHL per second, a 40x farm would receive 40 CHL per second.
           </Text>
           <Text small>This amount is already included in all APR calculations for the farm.</Text>
         </>
       ) : (
         <>
           <Text small>
-            The Multiplier represents the proportion of DEF rewards each farm receives, as a proportion of the DEF produced each block.
+            The Multiplier represents the proportion of CHL rewards each farm receives, as a proportion of the CHL produced each block.
           </Text>
         </>
       )}
@@ -122,7 +122,7 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
                   {displayApr}%
                 </Text>
                 {/* <Text color="textSubtle" small>
-                  *Base APR (DEF yield only)
+                  *Base APR (CHL yield only)
                 </Text>
                 <Text small textAlign="right">
                   {apr?.toFixed(2)}%

@@ -30,6 +30,13 @@ const fetchFarmPublicData = async ({ pids, chainId }): Promise<[SerializedFarm[]
     fetchMasterChefTokenPerTime(chainId)
   ])
 
+  const response = await fetch('https://kec.isg.fi/price')
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  
+  const _data = await response.json();
+
   const poolLengthAsBigNumber = new BigNumber(poolLength.toString())
   const regularTokenPerTime = getBalanceAmount(new BigNumber(tokenPerTime.toString()))
   const farmsConfig = await getFarmConfig(chainId)
@@ -38,7 +45,7 @@ const fetchFarmPublicData = async ({ pids, chainId }): Promise<[SerializedFarm[]
   )
   // const priceHelperLpsConfig = getFarmsPriceHelperLpFiles(chainId)
   const farms = await fetchFarms(farmsCanFetch, chainId)
-  const farmsWithPrices = farms.length > 0 ? getFarmsPrices(farms, chainId) : []
+  const farmsWithPrices = farms.length > 0 ? getFarmsPrices(farms, chainId, _data.price) : []
   return [farmsWithPrices, poolLengthAsBigNumber.toNumber(), regularTokenPerTime.toNumber()]
 }
 

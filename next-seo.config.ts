@@ -14,6 +14,6 @@ export const SEO: DefaultSeoProps = {
     title: 'Chalybs - A next evolution DeFi exchange on KaiChain',
     description:
       'The most popular AMM on KaiChain! Earn CHL through yield farming, then stake it in Pools to earn more tokens!',
-    images: [{ url: 'https://dexfinity.finance/logo.png' }],
+    images: [{ url: 'https://chalybs.net/logo.png' }],
   },
 }

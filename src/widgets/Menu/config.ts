@@ -47,6 +47,6 @@ export const socials = [
 	{
 		label: "Docs",
 		icon: ResourcesIcon,
-		href: "https://docs.dexfinity.finance",
+		href: "https://docs.chalybs.net",
 	},
 ];

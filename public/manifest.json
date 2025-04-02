@@ -1,8 +1,8 @@
 {
-  "short_name": "Dexfinity",
-  "name": "Dexfinity Finance",
-  "description": "Farm DEF with LP Tokens",
-  "homepage_url": "https://dexfinity.finance/",
+  "short_name": "Chalybs",
+  "name": "Chalybs Finance",
+  "description": "Farm CHL with LP Tokens",
+  "homepage_url": "https://chalybs.net/",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#1FC7D4",
@@ -20,5 +20,5 @@
       "sizes": "64x64"
     }
   ],
-  "iconPath": "/images/def.png"
+  "iconPath": "/images/chl.png"
 }

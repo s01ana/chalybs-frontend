@@ -93,7 +93,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 <Button as={NextLinkFromReactRouter} to="/presale" variant="primary" height="60px" px="25px">
                   <Text color="background">Join in Presale</Text>
                 </Button>
-                <Button as={NextLinkFromReactRouter} to="https://docs.dexfinity.finance/" target="_blank" variant="secondary" height="60px" ml="12px" px="25px">
+                <Button as={NextLinkFromReactRouter} to="https://docs.chalybs.net/" target="_blank" variant="secondary" height="60px" ml="12px" px="25px">
                   Documentation
                 </Button>
               </div>
@@ -601,7 +601,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                     </a>
                   </li>
                   <li className="social-list__item">
-                    <a href="https://docs.dexfinity.finance" className="social-list__link">
+                    <a href="https://docs.chalybs.net" className="social-list__link">
                       {/* <img src="images/home/github.png" width={32}/> */}
                       <ResourcesIcon />
                     </a>

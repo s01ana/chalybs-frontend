@@ -21,7 +21,7 @@ export const USDC_ARB = new ERC20Token(
 export const USDT_ARB = new ERC20Token(
   ChainId.MAINNET,
   '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
-  6,
+  18,
   'USDT',
   'Tether USD',
   'https://tether.to/',

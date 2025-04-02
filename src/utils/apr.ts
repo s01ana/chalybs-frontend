@@ -55,6 +55,7 @@ export const getFarmApr = (
     cakeRewardsAprAsNumber = cakeRewardsApr.toNumber()
   }
   const lpRewardsApr = (getLpApr()[farmAddress?.toLowerCase()] || getLpApr()[farmAddress]) ?? 0 // can get both checksummed or lowercase
+  
   return { cakeRewardsApr: cakeRewardsAprAsNumber, lpRewardsApr }
 }
 

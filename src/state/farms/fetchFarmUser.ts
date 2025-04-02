@@ -54,6 +54,7 @@ export const fetchFarmUserTokenBalances = async (
   const parsedTokenBalances = rawTokenBalances.map((tokenBalance) => {
     return new BigNumber(tokenBalance.toString()).toJSON()
   })
+  
   return parsedTokenBalances
 }
 
@@ -92,7 +93,7 @@ export const fetchFarmUserEarnings = async (account: string, farmsToFetch: Seria
   const calls = farmsToFetch.map((farm) => {
     return {
       address: masterChefAddress,
-      functionName: 'pendingDEF',
+      functionName: 'pendingCHL',
       abi: masterChefABI,
       args: [BigInt(farm.pid), userAddress as Address] as const,
     } as const

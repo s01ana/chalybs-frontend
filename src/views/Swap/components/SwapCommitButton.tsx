@@ -300,7 +300,7 @@ export default function SwapCommitButton({
         {/* COMING SOON */}
       </CommitButton>
 
-      {/* {swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null} */}
+      {swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
     </>
   )
 }

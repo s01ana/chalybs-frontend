@@ -21,27 +21,21 @@ const getPathList = (): PathList => {
   return {
     paths: {
       '/': { title: 'Home'},
-      '/swap': { basePath: true, title: 'Swap', image: `https://dexfinity.finance/images/web/og/swap.jpg` },
-      '/add': { basePath: true, title: 'Add LP', image: `https://dexfinity.finance/images/web/og/liquidity.jpg` },
-      '/remove': { basePath: true, title: 'Remove LP', image: `https://dexfinity.finance/images/web/og/liquidity.jpg` },
-      '/liquidity': { title: 'Liquidity', image: `https://dexfinity.finance/images/web/og/liquidity.jpg` },
+      '/swap': { basePath: true, title: 'Swap'},
+      '/add': { basePath: true, title: 'Add LP'},
+      '/remove': { basePath: true, title: 'Remove LP'},
+      '/liquidity': { title: 'Liquidity'},
       '/find': { title: 'Import LP' },
-      '/farms': { title: 'Farms', image: `https://dexfinity.finance/images/web/og/farms.jpg` },
-      '/pools': { title: 'Pools', image: `https://dexfinity.finance/images/web/og/farms.jpg` },
+      '/farms': { title: 'Farms'},
+      '/pools': { title: 'Pools'},
       '/info': {
-        title: "Overview - Info",
-        description: 'View statistics for Dexfinity exchanges.',
-        image: `https://dexfinity.finance/images/web/og/info.jpg`,
+        title: "Overview - Info"
       },
       '/info/pairs': {
-        title: 'Pairs - Info',
-        description: 'View statistics for Dexfinity exchanges.',
-        image: `https://dexfinity.finance/images/web/og/info.jpg`,
+        title: 'Pairs - Info'
       },
       '/info/tokens': {
-        title: "Tokens - Info",
-        description: 'View statistics for Dexfinity exchanges.',
-        image: `https://dexfinity.finance/images/web/og/info.jpg`,
+        title: "Tokens - Info"
       },
       '/multisend': { title: 'Multi-Sender' },
       // '/multisend/history': { title: 'Multi-Send History' },

@@ -15,6 +15,7 @@ import getLpAddress from 'utils/getLpAddress'
 import { multiplyPriceByAmount } from 'utils/prices'
 import { useActiveChainId } from './useActiveChainId'
 import { PairState, usePairs } from './usePairs'
+import useKECPrice from './useKECPrice'
 
 /**
  * Returns the price in BUSD of the input currency
@@ -35,6 +36,8 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
     [wnative, stable, chainId, currency, wrapped],
   )
   const [[bnbPairState, bnbPair], [busdPairState, busdPair], [busdBnbPairState, busdBnbPair]] = usePairs(tokenPairs)
+
+  const {data: kecPrice} = useKECPrice()
 
   return useMemo(() => {
     if (!currency || !wrapped || !chainId || !wnative) {
@@ -66,6 +69,7 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
       bnbPairState === PairState.EXISTS &&
       bnbPair.reserve0.greaterThan('0') &&
       bnbPair.reserve1.greaterThan('0')
+
     const isBusdBnbPairExist =
       busdBnbPair &&
       busdBnbPairState === PairState.EXISTS &&
@@ -73,6 +77,7 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
       busdBnbPair.reserve1.greaterThan('0')
 
     const bnbPairBNBAmount = isBnbPairExist && bnbPair?.reserveOf(wnative)
+    
     const bnbPairBNBBUSDValue =
       bnbPairBNBAmount && isBUSDPairExist && isBusdBnbPairExist
         ? busdBnbPair.priceOf(wnative).quote(bnbPairBNBAmount).quotient
@@ -93,6 +98,12 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
       }
     }
 
+    if (isBnbPairExist && kecPrice) {
+      const currencyBnbPrice = bnbPair.priceOf(wnative)
+      const price = currencyBnbPrice.multiply(new Price(wrapped, stable, BigInt(1e18), BigInt(kecPrice*1e18)))
+      return new Price(currency, stable, price.denominator, price.numerator)
+    }
+
     return undefined
   }, [
     currency,
@@ -106,6 +117,7 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
     busdPair,
     bnbPairState,
     busdBnbPairState,
+    kecPrice
   ])
 }
 

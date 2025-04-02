@@ -104,7 +104,7 @@ export function QuoteForm({
           </Flex>
           {/* <Flex width="100%" justifyContent="space-between" px="20px" my="10px">
             <Text fontSize="14px">Transaction Fee</Text>
-            <Text fontSize="14px">{Number(fee.toFixed(18))} DEF</Text>
+            <Text fontSize="14px">{Number(fee.toFixed(18))} CHL</Text>
           </Flex> */}
           <DataTable data={data} />
         </Box>

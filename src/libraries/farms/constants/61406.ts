@@ -2,21 +2,21 @@ import { mainnetTokens } from 'libraries/tokens'
 import { SerializedFarmConfig } from '..'
 
 const farms: SerializedFarmConfig[] = [
-  // {
-  //   pid: 0,
-  //   lpSymbol: 'DEF',
-  //   lpAddress: '0x1e7F25Af19DD9c3229d43041867c2924af6dd304',
-  //   quoteToken: mainnetTokens.usdt,
-  //   token: mainnetTokens.gtoken,
-  //   isTokenOnly: true,
-  // },
-  // {
-  //   pid: 1,
-  //   lpSymbol: 'DEF-ETH LP',
-  //   lpAddress: '0x1e7F25Af19DD9c3229d43041867c2924af6dd304',
-  //   quoteToken: mainnetTokens.weth,
-  //   token: mainnetTokens.gtoken,
-  // },
+  {
+    pid: 0,
+    lpSymbol: 'CHL',
+    lpAddress: '0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6',
+    quoteToken: mainnetTokens.wkec,
+    token: mainnetTokens.gtoken,
+    isTokenOnly: true,
+  },
+  {
+    pid: 1,
+    lpSymbol: 'CHL-KEC LP',
+    lpAddress: '0x2F1EE874Cf53F0A3565c67F96FbA7699eE78b0dF',
+    quoteToken: mainnetTokens.wkec,
+    token: mainnetTokens.gtoken,
+  },
   // {
   //   pid: 2,
   //   lpSymbol: 'DEF-USDT LP',
@@ -87,7 +87,7 @@ const farms: SerializedFarmConfig[] = [
   //   quoteToken: mainnetTokens.usdt,
   //   token: mainnetTokens.arb,
   // },
-// ].map((p) => ({ ...p, lpAddress: p.lpAddress as `0x${string}`, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
-]
+  ].map((p) => ({ ...p, lpAddress: p.lpAddress as `0x${string}`, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
+// ]
 
 export default farms

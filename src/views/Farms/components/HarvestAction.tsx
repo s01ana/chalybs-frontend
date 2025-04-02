@@ -73,7 +73,7 @@ export const HarvestAction: React.FunctionComponent<React.PropsWithChildren<Harv
       toastSuccess(
         `Harvested!`,
         <ToastDescriptionWithTx txHash={receipt.transactionHash}>
-          Your DEF earnings have been sent to your wallet!
+          Your CHL earnings have been sent to your wallet!
         </ToastDescriptionWithTx>,
       )
       onDone?.()
@@ -84,7 +84,7 @@ export const HarvestAction: React.FunctionComponent<React.PropsWithChildren<Harv
     <ActionContainer>
       <ActionTitles>
         <Text textTransform="uppercase" color="secondary" fontSize="12px" pr="4px">
-        DEF
+        CHL
         </Text>
         <Text textTransform="uppercase" color="textSubtle" fontSize="12px">
           Earned

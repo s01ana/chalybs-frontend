@@ -1,5 +1,5 @@
 {
-  "name": "dexfinity-frontend",
+  "name": "chalybs-frontend",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -44,7 +44,6 @@
     "@vanilla-extract/next-plugin": "^2.1.1",
     "@vanilla-extract/recipes": "^0.2.5",
     "@vanilla-extract/sprinkles": "^1.6.1",
-    "@vercel/analytics": "^1.4.1",
     "ajv": "^6.12.3",
     "aos": "^2.3.4",
     "big.js": "^5.2.2",

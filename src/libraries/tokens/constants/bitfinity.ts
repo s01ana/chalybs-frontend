@@ -3,7 +3,7 @@ import { ERC20Token, WETH9 } from 'libraries/swap-sdk'
 import { USDC, USDT, DAI_ARB, WBTC_ARB, GTOKEN } from './common'
 
 export const mainnetTokens = { 
-  wbtf: WETH9[ChainId.MAINNET],
+  wkec: WETH9[ChainId.MAINNET],
   gtoken: GTOKEN[ChainId.MAINNET],
   test: new ERC20Token(
     ChainId.MAINNET,
