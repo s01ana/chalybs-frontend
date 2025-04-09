@@ -82,7 +82,7 @@ function MyApp(props: AppProps<{ initialReduxState: any; dehydratedState: any }>
         />
         <meta
           name="description"
-          content="Discover CHL, the leading DEX on Bitfinity Network with the best rewarding in DeFi."
+          content="Discover CHL, the leading DEX on KaiChain with the best rewarding in DeFi."
         />
         <meta name="theme-color" content="#1FC7D4" />
         {(Component as NextPageWithLayout).mp && (

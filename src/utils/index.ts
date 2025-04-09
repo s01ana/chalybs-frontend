@@ -1,4 +1,4 @@
-import { ChainId, bitfinity } from 'config/chains'
+import { ChainId, kaichain } from 'config/chains'
 import { Currency } from 'libraries/swap-sdk'
 import { TokenAddressMap } from 'libraries/token-lists'
 import memoize from 'lodash/memoize'
@@ -25,7 +25,7 @@ export function getBlockExploreLink(
 ): string {
   const chainId = chainIdOverride || ChainId.MAINNET || ChainId.TESTNET
   const chain = chains.find((c) => c.id === chainId)
-  if (!chain || !data) return bitfinity.blockExplorers.default.url
+  if (!chain || !data) return kaichain.blockExplorers.default.url
   switch (type) {
     case 'transaction': {
       return `${chain?.blockExplorers?.default.url}/tx/${data}`
@@ -49,12 +49,12 @@ export function getBlockExploreName(chainIdOverride?: number) {
   const chainId = chainIdOverride || ChainId.MAINNET
   const chain = chains.find((c) => c.id === chainId)
 
-  return chain?.blockExplorers?.default.name || bitfinity.blockExplorers.default.name
+  return chain?.blockExplorers?.default.name || kaichain.blockExplorers.default.name
 }
 
 export function getBscScanLinkForNft(collectionAddress: string | undefined, tokenId?: string): string {
   if (!collectionAddress) return ''
-  return `${bitfinity.blockExplorers.default.url}/token/${collectionAddress}?a=${tokenId}`
+  return `${kaichain.blockExplorers.default.url}/token/${collectionAddress}?a=${tokenId}`
 }
 
 // add 10%
