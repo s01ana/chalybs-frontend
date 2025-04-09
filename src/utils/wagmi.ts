@@ -25,7 +25,7 @@ export const wagmiAdapter = new WagmiAdapter({
     storage: cookieStorage
   }),
   ssr: true,
-  projectId: "a422ab186dd0923a8d9845b0a6abcbeb",
+  projectId: "14ac4d4db47ac7791cfea9a4562822b8",
   networks: chains
 })
 
@@ -33,7 +33,7 @@ export const config = wagmiAdapter.wagmiConfig
 
 createAppKit({
   adapters: [wagmiAdapter],
-  projectId: "a422ab186dd0923a8d9845b0a6abcbeb",
+  projectId: "14ac4d4db47ac7791cfea9a4562822b8",
   allowUnsupportedChain: false,
   networks: CHAINS,
   metadata,
