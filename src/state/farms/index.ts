@@ -30,7 +30,7 @@ const fetchFarmPublicData = async ({ pids, chainId }): Promise<[SerializedFarm[]
     fetchMasterChefTokenPerTime(chainId)
   ])
 
-  const response = await fetch('https://kec.isg.fi/price')
+  const response = await fetch('https://kecprice.chalybs.net/price')
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }

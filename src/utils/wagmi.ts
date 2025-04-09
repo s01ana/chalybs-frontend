@@ -51,7 +51,7 @@ createAppKit({
   themeVariables: {
     '--w3m-color-mix': '#1a202c',
     '--w3m-color-mix-strength': 10,
-    '--w3m-accent': '#03FEFF',
+    '--w3m-accent': '#00babb',
     '--w3m-border-radius-master': '1.5px'
   },
   chainImages: {
