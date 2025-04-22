@@ -100,7 +100,7 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
 
     if (isBnbPairExist && kecPrice) {
       const currencyBnbPrice = bnbPair.priceOf(wnative)
-      const price = currencyBnbPrice.multiply(new Price(wrapped, stable, BigInt(1e18), BigInt(kecPrice*1e18)))
+      const price = currencyBnbPrice.multiply(new Price(wrapped, stable, BigInt(1e18), BigInt(Math.round(kecPrice*1e18))))
       return new Price(currency, stable, price.denominator, price.numerator)
     }
 
