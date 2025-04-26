@@ -199,8 +199,8 @@ const Presale = () => {
                       </Text>
                     </Flex>
                     <SocialLinks links={[
-                      "https://x.com/xdexfinity",
-                      "https://t.me/DexfinityFinance",
+                      "https://x.com/Chalybs01",
+                      "https://t.me/+fDl9tssNdvk0N2Rh",
                       "https://discord.gg/ySugAwJD7D",
                       "https://docs.chalybs.net"
                     ]} />

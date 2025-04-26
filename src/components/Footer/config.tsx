@@ -83,7 +83,7 @@ export const socials = [
   {
     label: "Twitter",
     icon: TwitterIcon,
-    href: "https://x.com/xdexfinity",
+    href: "https://x.com/Chalybs01",
   },
   // {
   //   label: "Facebook",

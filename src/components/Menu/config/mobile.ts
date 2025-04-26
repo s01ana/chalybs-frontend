@@ -79,12 +79,12 @@ const config: (
         // },
         {
           label: 'Twitter',
-          href: 'https://x.com/',
+          href: 'https://x.com/Chalybs01',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
         {
           label: 'Telegram',
-          href: 'https://t.me/',
+          href: 'https://t.me/+fDl9tssNdvk0N2Rh',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
         {

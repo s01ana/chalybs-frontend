@@ -583,13 +583,13 @@ const Home: React.FC<React.PropsWithChildren> = () => {
 
                 <ul className="social-list">
                   <li className="social-list__item">
-                    <a href="https://x.com/xdexfinity" className="social-list__link">
+                    <a href="https://x.com/Chalybs01" className="social-list__link">
                       {/* <img src="images/home/twitter.png" width={32}/> */}
                       <TwitterIcon />
                     </a>
                   </li>
                   <li className="social-list__item">
-                    <a href="https://t.me/DexfinityFinance" className="social-list__link">
+                    <a href="https://t.me/+fDl9tssNdvk0N2Rh" className="social-list__link">
                       {/* <img src="images/home/telegram.png" width={32}/> */}
                       <TelegramIcon />
                     </a>
