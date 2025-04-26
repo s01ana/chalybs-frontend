@@ -87,11 +87,11 @@ const config: (
           href: 'https://t.me/+fDl9tssNdvk0N2Rh',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
-        {
-          label: 'Discord',
-          href: 'https://discord.gg/',
-          type: DropdownMenuItemType.EXTERNAL_LINK
-        },
+        // {
+        //   label: 'Discord',
+        //   href: 'https://discord.gg/',
+        //   type: DropdownMenuItemType.EXTERNAL_LINK
+        // },
         {
           label: 'Docs',
           href: 'https://docs.chalybs.finance/',
