@@ -7,8 +7,8 @@ import { erc20Abi  } from './abis/ERC20'
 import { pancakePairV2ABI } from './abis/IPancakePair'
 
 let TOKEN_DECIMALS_CACHE: { [chainId: number]: { [address: string]: number } } = {
-  [ChainId.MAINNET]: {},
-  [ChainId.TESTNET]: {},
+  [ChainId.KAI]: {},
+  [ChainId.BSC]: {},
 }
 
 const mainnetClient = createPublicClient({ chain: kaichain, transport: http() })
@@ -16,9 +16,9 @@ const testnetClient = createPublicClient({ chain: kaichain, transport: http() })
 
 const getDefaultClient = (chainId: ChainId): PublicClient => {
   switch (chainId) {
-    case ChainId.MAINNET:
+    case ChainId.KAI:
       return mainnetClient
-    case ChainId.TESTNET:
+    case ChainId.BSC:
       return testnetClient
     default:
       return mainnetClient

@@ -3,12 +3,12 @@ import { VaultConfigBaseProps } from './types'
 
 let logged = false
 
-export const supportedChainId = [ChainId.MAINNET, ChainId.TESTNET]
+export const supportedChainId = [ChainId.KAI, ChainId.BSC]
 
 export const getVaultConfig = async (chainId: ChainId) => {
     try {
       let chainId_ = chainId;
-      if (!supportedChainId.includes(chainId)) chainId_ = ChainId.MAINNET
+      if (!supportedChainId.includes(chainId)) chainId_ = ChainId.KAI
       return (await import(`/${chainId_}.ts`)).default.filter(
         (v: VaultConfigBaseProps) => v.id !== null,
       ) as VaultConfigBaseProps[]

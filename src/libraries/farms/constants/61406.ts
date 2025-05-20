@@ -1,4 +1,4 @@
-import { mainnetTokens } from 'libraries/tokens'
+import { kaiTokens } from 'libraries/tokens'
 import { SerializedFarmConfig } from '..'
 
 const farms: SerializedFarmConfig[] = [
@@ -6,16 +6,16 @@ const farms: SerializedFarmConfig[] = [
     pid: 0,
     lpSymbol: 'CHL',
     lpAddress: '0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6',
-    quoteToken: mainnetTokens.wkec,
-    token: mainnetTokens.gtoken,
+    quoteToken: kaiTokens.wkec,
+    token: kaiTokens.gtoken,
     isTokenOnly: true,
   },
   {
     pid: 1,
     lpSymbol: 'CHL-KEC LP',
     lpAddress: '0x2F1EE874Cf53F0A3565c67F96FbA7699eE78b0dF',
-    quoteToken: mainnetTokens.wkec,
-    token: mainnetTokens.gtoken,
+    quoteToken: kaiTokens.wkec,
+    token: kaiTokens.gtoken,
   },
   // {
   //   pid: 2,

@@ -37,7 +37,7 @@ export function FinishForm({
     setFinishData({
       address: "" as `0x${string}`,
       hash: "",
-      chainId: ChainId.MAINNET
+      chainId: ChainId.KAI
     })
 
     setModalView(TokenFormView.Create)

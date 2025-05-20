@@ -9,7 +9,7 @@
 //   return <Launchpad pool={address} />
 // }
 
-// LaunchpadPage.chains = [ChainId.MAINNET, ChainId.TESTNET]
+// LaunchpadPage.chains = [ChainId.KAI, ChainId.BSC]
 
 // export default LaunchpadPage
 

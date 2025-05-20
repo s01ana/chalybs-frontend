@@ -2,6 +2,7 @@ import ResetCSS from 'ResetCSS'
 import { ToastListener } from 'contexts'
 import BigNumber from 'bignumber.js'
 import { ScrollToTopButtonV2 } from 'components/ScrollToTopButton'
+import NetworkCheck from 'components/NetworkCheck'
 import { PageMeta } from 'components/Layout/Page'
 import { DisclaimerModal } from 'components'
 // import { NetworkModal } from 'components/NetworkModal'
@@ -132,7 +133,7 @@ type NextPageWithLayout = NextPage & {
   mp?: boolean
   /**
    * allow chain per page, empty array bypass chain block modal
-   * @default [ChainId.MAINNET]
+   * @default [ChainId.KAI]
    * */
   chains?: number[]
   isShowScrollToTopButton?: true
@@ -174,6 +175,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         </Layout>
       </ShowMenu>
       <ToastListener />
+      <NetworkCheck pageSupportedChains={Component.chains} />
       {/* <NetworkModal pageSupportedChains={Component.chains} /> */}
       {/* <DisclaimerModal /> */}
       {isShowScrollToTopButton && <ScrollToTopButtonV2 />}

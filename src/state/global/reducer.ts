@@ -14,7 +14,7 @@ export const initialState: GlobalState = {
   showFarmTransactionModal: false,
   pickedFarmTransactionModalTx: {
     tx: '',
-    chainId: ChainId.MAINNET,
+    chainId: ChainId.KAI,
   },
 }
 

@@ -4,7 +4,7 @@ import { safeGetAddress } from 'utils'
 import memoize from 'lodash/memoize'
 
 const getLpAddress = memoize(
-  (token1: string | ERC20Token | undefined, token2: string | ERC20Token | undefined, chainId: number = ChainId.MAINNET) => {
+  (token1: string | ERC20Token | undefined, token2: string | ERC20Token | undefined, chainId: number = ChainId.KAI) => {
     let token1AsTokenInstance = token1
     let token2AsTokenInstance = token2
     if (!token1 || !token2) {

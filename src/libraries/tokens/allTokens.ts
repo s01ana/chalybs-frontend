@@ -1,8 +1,8 @@
 import { ChainId } from 'config/chains'
 
-import { mainnetTokens } from './constants/bitfinity'
+import { kaiTokens } from './constants/kai'
 
 export const allTokens = {
-  [ChainId.MAINNET]: mainnetTokens,
-  [ChainId.TESTNET]: mainnetTokens,
+  [ChainId.KAI]: kaiTokens,
+  [ChainId.BSC]: kaiTokens,
 }

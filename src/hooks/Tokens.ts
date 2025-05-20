@@ -17,6 +17,7 @@ import {
 import { safeGetAddress } from 'utils'
 import { useToken as useToken_ } from 'wagmi'
 import { useReadContracts } from 'libraries/wagmi'
+import { USDT } from 'libraries/tokens'
 import useUserAddedTokens from '../state/user/hooks/useUserAddedTokens'
 import { useActiveChainId } from './useActiveChainId'
 import useNativeCurrency from './useNativeCurrency'
@@ -229,4 +230,28 @@ export function useCurrency(currencyId: string | undefined): UnsafeCurrency {
 
   const token = useToken(isNative ? undefined : currencyId)
   return isNative ? native : token
+}
+
+export function useTokenSymbol(chainId: number, symbol?: string): ERC20Token | undefined | null {
+  const tokens = useAllTokens()
+  
+  const allTokens = Object.values(tokens)
+
+  const token = allTokens.filter((t) => t.symbol === symbol)
+
+  return useMemo(() => {
+    if (token.length > 0) return token[0]
+    if (!chainId) return undefined
+    return undefined
+  }, [chainId, token])
+}
+
+export function useCurrencyBridge(chainId: number, currencyId: string | undefined): Currency | ERC20Token | null | undefined {
+  // const native = useNativeCurrency(chainId)
+  // const isNative =
+  //   currencyId?.toUpperCase() === native.symbol?.toUpperCase() || currencyId?.toLowerCase() === GELATO_NATIVE
+  // const token = useTokenSymbol(chainId, isNative ? undefined : currencyId)
+  // return isNative ? native : token ?? USDT[chainId]
+  const token = useTokenSymbol(chainId, currencyId)
+  return token ?? USDT[chainId]
 }

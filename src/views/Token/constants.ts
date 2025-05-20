@@ -4,14 +4,14 @@
 import { standardTokenABI } from "config/abi/standardToken"
 
 // export const fee: ChainMap<string> = {
-// 	[ChainId.MAINNET]: '10',
-// 	[ChainId.TESTNET]: '0.001',
+// 	[ChainId.KAI]: '10',
+// 	[ChainId.BSC]: '0.001',
 // }
 
 
 // export const feeReceivers: ChainMap<string> = {
-// 	[ChainId.MAINNET]: '0xBFe92b43b5d465A9193c8E200ec8C42434C8E113',
-// 	[ChainId.TESTNET]: '0xD52c5455dFa0382C643eDb3D41c00799289A8a7f',
+// 	[ChainId.KAI]: '0xBFe92b43b5d465A9193c8E200ec8C42434C8E113',
+// 	[ChainId.BSC]: '0xD52c5455dFa0382C643eDb3D41c00799289A8a7f',
 // }
 
 export const tokenABI = {

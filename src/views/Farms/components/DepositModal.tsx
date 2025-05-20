@@ -134,7 +134,7 @@ const DepositModal: React.FC<React.PropsWithChildren<DepositModalProps>> = ({
 
   if (showRoiCalculator) {
     return (
-      <ModalV2 isOpen={showRoiCalculator}>
+      <ModalV2 isOpen>
         <RoiCalculatorModal
           account={account}
           linkLabel={`Get ${lpLabel}`}

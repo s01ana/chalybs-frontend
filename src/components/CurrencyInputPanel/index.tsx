@@ -182,7 +182,7 @@ export default function CurrencyInputPanel({
           </LabelRow>
         </InputContainer>
         <Flex>
-          {beforeButton}
+          <>{beforeButton}</>
           <CurrencySelectButton
             selected={!!currency}
             onClick={() => {

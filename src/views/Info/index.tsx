@@ -11,9 +11,9 @@ export const InfoPageLayout = ({ children }) => {
   // const router = useRouter()
 
   // useEffect(() => {
-  //   if (account && chainId === ChainId.MAINNET && router.query.chainName === 'arb')
+  //   if (account && chainId === ChainId.KAI && router.query.chainName === 'arb')
   //     router.replace('/info', undefined, { shallow: true })
-  //   else if (account && chainId === ChainId.MAINNET && router.query.chainName !== 'arb')
+  //   else if (account && chainId === ChainId.KAI && router.query.chainName !== 'arb')
   //     router.replace('/info/arb', undefined, { shallow: true })
   // }, [chainId, account, router])
 

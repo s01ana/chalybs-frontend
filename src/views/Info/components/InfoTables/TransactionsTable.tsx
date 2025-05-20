@@ -101,7 +101,7 @@ const DataRow: React.FC<React.PropsWithChildren<{ transaction: Transaction }>> =
   return (
     <ResponsiveGrid>
       <LinkExternal
-        href={getBlockExploreLink(transaction.hash, 'transaction', ChainId.MAINNET)}
+        href={getBlockExploreLink(transaction.hash, 'transaction', ChainId.KAI)}
       >
         <Text>
           {transaction.type === TransactionType.MINT
@@ -120,7 +120,7 @@ const DataRow: React.FC<React.PropsWithChildren<{ transaction: Transaction }>> =
         <Text>{`${formatAmount(abs1)} ${transaction.token1Symbol}`}</Text>
       </Text>
       <LinkExternal
-        href={getBlockExploreLink(transaction.sender, 'address', ChainId.MAINNET)}
+        href={getBlockExploreLink(transaction.sender, 'address', ChainId.KAI)}
       >
         {truncateHash(transaction.sender)}
       </LinkExternal>

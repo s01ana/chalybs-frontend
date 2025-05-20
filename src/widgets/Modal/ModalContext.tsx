@@ -30,7 +30,7 @@ interface ModalsContext {
   onDismiss: Handler;
 }
 
-export const StyledModalWrapper = styled(m.div)`
+export const StyledModalWrapper = styled(m.div as any)`
   display: flex;
   flex-direction: column;
   justify-content: center;

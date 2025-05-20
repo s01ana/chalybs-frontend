@@ -23,9 +23,9 @@ export const SwapFeaturesContext = createContext<{
   setIsChartDisplayed: (a: boolean) => {},
 })
 
-const CHART_SUPPORT_CHAIN_IDS = [ChainId.MAINNET]
-const ACCESS_TOKEN_SUPPORT_CHAIN_IDS = [ChainId.MAINNET]
-const STABLE_SUPPORT_CHAIN_IDS = [ChainId.MAINNET]
+const CHART_SUPPORT_CHAIN_IDS = [ChainId.KAI]
+const ACCESS_TOKEN_SUPPORT_CHAIN_IDS = [ChainId.KAI]
+const STABLE_SUPPORT_CHAIN_IDS = [ChainId.KAI]
 
 export const SwapFeaturesProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { isMobile } = useMatchBreakpoints()

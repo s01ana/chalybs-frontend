@@ -35,7 +35,7 @@ export const ModalWrapper = ({
       style={{ overflow: "visible" }}
     >
       <Box overflow="hidden" borderRadius="16px" {...props}>
-        {children}
+        <>{children}</>
       </Box>
     </ModalContainer>
   );
@@ -66,10 +66,12 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
       >
         <ModalTitle>
           {onBack && <ModalBackButton onBack={onBack} />}
-          <Text fontSize="18px">{title}</Text>
+          <Text fontSize="18px"><>{title}</></Text>
         </ModalTitle>
-        {headerRightSlot}
-        {!hideCloseButton && <ModalCloseButton onDismiss={onDismiss} />}
+        <>
+          {headerRightSlot}
+          {!hideCloseButton && <ModalCloseButton onDismiss={onDismiss} />}
+        </>
       </ModalHeader>
       <ModalBody
         position="relative"
@@ -79,7 +81,7 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> = ({
         p={bodyPadding}
         style={{ alignItems: bodyAlignItems ?? "normal" }}
       >
-        {children}
+        <>{children}</>
       </ModalBody>
     </ModalWrapper>
   );

@@ -5,8 +5,8 @@ import { safeGetAddress } from 'utils'
 import { isAddress } from 'viem'
 
 const mapping = {
-  [ChainId.MAINNET]: 'mainnet',
-  [ChainId.TESTNET]: 'testnet',
+  [ChainId.KAI]: 'mainnet',
+  [ChainId.BSC]: 'testnet',
 }
 
 const getTokenLogoURL = memoize(

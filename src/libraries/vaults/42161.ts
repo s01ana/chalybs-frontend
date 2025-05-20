@@ -1,4 +1,4 @@
-import { mainnetTokens } from 'libraries/tokens'
+import { kaiTokens } from 'libraries/tokens'
 import { VaultConfigBaseProps } from './types'
 
 const vaults: VaultConfigBaseProps[] = [

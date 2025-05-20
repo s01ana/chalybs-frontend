@@ -23,7 +23,7 @@ export function getBlockExploreLink(
   type: 'transaction' | 'token' | 'address' | 'block' | 'countdown',
   chainIdOverride?: number,
 ): string {
-  const chainId = chainIdOverride || ChainId.MAINNET || ChainId.TESTNET
+  const chainId = chainIdOverride || ChainId.KAI || ChainId.BSC
   const chain = chains.find((c) => c.id === chainId)
   if (!chain || !data) return kaichain.blockExplorers.default.url
   switch (type) {
@@ -46,7 +46,7 @@ export function getBlockExploreLink(
 }
 
 export function getBlockExploreName(chainIdOverride?: number) {
-  const chainId = chainIdOverride || ChainId.MAINNET
+  const chainId = chainIdOverride || ChainId.KAI
   const chain = chains.find((c) => c.id === chainId)
 
   return chain?.blockExplorers?.default.name || kaichain.blockExplorers.default.name

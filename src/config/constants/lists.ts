@@ -17,5 +17,5 @@ export const DEFAULT_LIST_OF_LISTS: string[] = []
 export const DEFAULT_ACTIVE_LIST_URLS: string[] = []
 
 export const MULTI_CHAIN_LIST_URLS: { [chainId: number]: string[] } = {
-    [ChainId.MAINNET]: [],
+    [ChainId.KAI]: [],
   }

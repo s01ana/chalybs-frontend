@@ -9,6 +9,7 @@ import { resetMintState } from 'state/mint/actions'
 import AddLiquidity from 'views/Pool/AddPool'
 import { CHAIN_IDS } from 'utils/wagmi'
 import { useActiveChainId } from 'hooks/useActiveChainId'
+import { ChainId } from 'config/chains'
 
 const AddLiquidityPage = () => {
   const router = useRouter()
@@ -34,7 +35,7 @@ const AddLiquidityPage = () => {
   return <AddLiquidity currencyA={currencyA} currencyB={currencyB} />
 }
 
-AddLiquidityPage.chains = CHAIN_IDS
+AddLiquidityPage.chains = [ChainId.KAI]
 
 export default AddLiquidityPage
 

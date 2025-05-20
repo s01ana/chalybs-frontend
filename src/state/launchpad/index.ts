@@ -33,7 +33,7 @@ export const fetchInitialLaunchpadData = createAsyncThunk<
   return {
     address,
     launchpad: {
-      chainId: ChainId.MAINNET,
+      chainId: ChainId.KAI,
       presaleType: "standard",
       token: "",
       buyToken: "",

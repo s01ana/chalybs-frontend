@@ -14,7 +14,8 @@ import {
   getContributionContract,
   getSmartRouterContract,
   getTreasuryContract,
-  getPresaleContract
+  getPresaleContract,
+  getBridgeContract
 } from 'utils/contractHelpers'
 
 import { ChainId } from 'config/chains'
@@ -34,7 +35,7 @@ export const useERC20 = (address?: Address, options?: UseContractOptions) => {
 export const useCake = () => {
   const { chainId } = useActiveChainId()
 
-  return useContract((GTOKEN[chainId].address) ?? GTOKEN[ChainId.MAINNET].address, erc20Abi)
+  return useContract((GTOKEN[chainId].address) ?? GTOKEN[ChainId.KAI].address, erc20Abi)
 }
 
 export const useMasterchef = () => {
@@ -152,4 +153,10 @@ export const usePresaleContract = () => {
   const { chainId } = useActiveChainId()
   const { data: signer } = useWalletClient()
   return useMemo(() => getPresaleContract(signer, chainId), [signer, chainId])
+}
+
+export const useBridge = () => {
+  const { chainId } = useActiveChainId()
+  const { data: signer } = useWalletClient()
+  return useMemo(() => getBridgeContract(signer, chainId), [signer, chainId])
 }

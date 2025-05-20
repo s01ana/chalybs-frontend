@@ -12,7 +12,7 @@ export class Ether extends NativeCurrency {
   }
 
   public get wrapped(): Token {
-    const weth9 = WETH9[this.chainId as ChainId.MAINNET]
+    const weth9 = WETH9[this.chainId as ChainId.KAI]
 
     invariant(!!weth9, 'WRAPPED')
 

@@ -9,7 +9,8 @@ import {
   getContributionAddress,
   getSmartRouterAddress,
   getTreasuryAddress,
-  getPresaleAddress
+  getPresaleAddress,
+  getBridgeAddress
 } from 'utils/addressHelpers'
 
 // ABI
@@ -35,11 +36,12 @@ import { contributionABI } from 'config/abi/contribution'
 import { smartRouterABI } from 'config/abi/smartRouter'
 import { treasuryABI } from 'config/abi/treasury'
 import { presaleABI } from 'config/abi/presale'
+import { bridgeABI } from 'config/abi/bridge'
 
 export const getContract = <TAbi extends Abi | readonly unknown[], TWalletClient extends WalletClient>({
   abi,
   address,
-  chainId = ChainId.MAINNET,
+  chainId = ChainId.KAI,
   publicClient,
   signer,
 }: {
@@ -76,7 +78,7 @@ export const getLpContract = (address: Address, chainId?: number, signer?: Walle
 export const getGTokenContract = (chainId?: number) => {
   return getContract({
     abi: erc20Abi,
-    address: chainId ? GTOKEN[chainId]?.address : GTOKEN[ChainId.MAINNET].address,
+    address: chainId ? GTOKEN[chainId]?.address : GTOKEN[ChainId.KAI].address,
     chainId,
   })
 }
@@ -124,4 +126,12 @@ export const getTreasuryContract = (signer?: WalletClient, chainId?: number) => 
 
 export const getPresaleContract = (signer?: WalletClient, chainId?: number) => {
   return getContract({ abi: presaleABI, address: getPresaleAddress(chainId), signer })
+}
+
+export const getBridgeContract = (signer?: WalletClient, chainId?: number) => {
+  return getContract({ 
+    abi: bridgeABI,
+    address: getBridgeAddress(chainId), 
+    signer 
+  })
 }

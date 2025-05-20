@@ -25,6 +25,22 @@
       "symbol": "CHL",
       "decimals": 18,
       "logoURI": "/images/61406/tokens/0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6.png"
+    },
+    {
+      "chainId": 61406,
+      "address": "0xDdC7b191BDa1815e9884209E16bEBf92aF27C75b",
+      "name": "KRC20 USDT",
+      "symbol": "USDT",
+      "decimals": 18,
+      "logoURI": "/images/61406/tokens/0xDdC7b191BDa1815e9884209E16bEBf92aF27C75b.png"
+    },
+    {
+      "chainId": 56,
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 18,
+      "logoURI": "/images/56/tokens/0x55d398326f99059fF775485246999027B3197955.png"
     }
   ]
 }

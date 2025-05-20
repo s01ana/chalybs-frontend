@@ -147,12 +147,12 @@ const getFarmsPrices = (farms: SerializedFarm[], chainId: number, bnbPrice: numb
 export default getFarmsPrices
 
 const nativeStableLpMap = {
-  [ChainId.MAINNET]: {
+  [ChainId.KAI]: {
     address: '0xd04Bc65744306A5C149414dd3CD5c984D9d3470d',
     wNative: 'WKEC',
     stable: 'CHL',
   },
-  [ChainId.TESTNET]: {
+  [ChainId.BSC]: {
     address: '0xd04Bc65744306A5C149414dd3CD5c984D9d3470d',
     wNative: 'WETH',
     stable: 'USDT',

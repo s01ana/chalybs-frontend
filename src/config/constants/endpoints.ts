@@ -6,11 +6,11 @@ export const BLOCKS_CLIENT = 'https://gateway.thegraph.com/api/fda00884bf8347a3e
 export const BIT_QUERY = 'https://graphql.bitquery.io'
 
 export const INFO_CLIENT_WITH_CHAIN = {
-  [ChainId.MAINNET]: INFO_CLIENT,
-  [ChainId.TESTNET]: INFO_CLIENT,
+  [ChainId.KAI]: INFO_CLIENT,
+  [ChainId.BSC]: INFO_CLIENT,
 }
 
 export const BLOCKS_CLIENT_WITH_CHAIN = {
-  [ChainId.MAINNET]: BLOCKS_CLIENT,
-  [ChainId.TESTNET]: BLOCKS_CLIENT,
+  [ChainId.KAI]: BLOCKS_CLIENT,
+  [ChainId.BSC]: BLOCKS_CLIENT,
 }

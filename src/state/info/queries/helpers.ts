@@ -228,7 +228,7 @@ export async function getPairTokenMap(poolAddresses: string[], chainId: ChainId)
     //   abi: IPancakePairABI,
     //   calls,
     //   options: { requireSuccess: false },
-    //   chainId: ChainId.MAINNET,
+    //   chainId: ChainId.KAI,
     // })
     rawPairTokenResults = await client.multicall({ contracts: calls, allowFailure: false })
   } catch (error) {
@@ -258,7 +258,7 @@ export async function getPairTokenMap(poolAddresses: string[], chainId: ChainId)
     //   abi: bep20Abi,
     //   calls: tokenCalls,
     //   options: { requireSuccess: false },
-    //   chainId: ChainId.MAINNET,
+    //   chainId: ChainId.KAI,
     // })
     rawTokenResults = await client.multicall({ contracts: calls, allowFailure: false })
   } catch (error) {

@@ -21,11 +21,11 @@ export const multiChainStartTime = {
 }
 
 export const multiChainId = {
-  ARB: ChainId.MAINNET
+  ARB: ChainId.KAI
 }
 
 export const multiChainPaths = {
-  [ChainId.MAINNET]: '',
+  [ChainId.KAI]: '',
 }
 
 export const multiChainQueryClient = {

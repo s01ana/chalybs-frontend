@@ -49,14 +49,10 @@ const config: (
           label: 'Pools',
           href: '/pools',
         },
-        // {
-        //   label: 'Vaults',
-        //   href: '/vaults',
-        // },
-        // {
-        //   label: 'Leverage Trading',
-        //   href: '/xtrade',
-        // },
+        {
+          label: 'Bridge',
+          href: '/bridge',
+        },
         // {
         //   label: 'Bonds',
         //   href: '/bonds',

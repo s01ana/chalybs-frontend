@@ -73,6 +73,15 @@ const config: (
       showItemsOnMobile: false,
       items: [].map((item) => addMenuItemSupported(item, chainId)),
     },
+    {
+      label: 'Bridge',
+      href: '/bridge',
+      icon: EarnIcon,
+      fillIcon: EarnFillIcon,
+      image: '/images/decorations/pe2.png',
+      showItemsOnMobile: false,
+      items: [].map((item) => addMenuItemSupported(item, chainId)),
+    },
     // {
     //   label: 'Tools',
     //   href: '/token',

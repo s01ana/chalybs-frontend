@@ -7,7 +7,7 @@ export type Addresses = {
 }
 
 export const getAddressFromMap = (address: Addresses, chainId?: number): `0x${string}` => {
-  return chainId && address[chainId] ? address[chainId] : address[ChainId.MAINNET]
+  return chainId && address[chainId] ? address[chainId] : address[ChainId.KAI]!
 }
 
 export const getAddressFromMapNoFallback = (address: Addresses, chainId?: number): `0x${string}` | null => {
@@ -47,4 +47,8 @@ export const getTreasuryAddress = (chainId?: number) => {
 
 export const getPresaleAddress = (chainId?: number) => {
   return getAddressFromMap(addresses.presale, chainId)
+}
+
+export const getBridgeAddress = (chainId?: number) => {
+  return getAddressFromMap(addresses.bridge, chainId)
 }

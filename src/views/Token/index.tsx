@@ -36,7 +36,7 @@ const Launchpad: React.FC<React.PropsWithChildren> = () => {
   const [finishData, setFinishData] = useState<FinishData>({
     address: "" as `0x${string}`,
     hash: "",
-    chainId: ChainId.MAINNET
+    chainId: ChainId.KAI
   })
 
   return (

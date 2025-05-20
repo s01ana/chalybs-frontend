@@ -4,39 +4,39 @@ import { Percent, Token, WNATIVE } from 'libraries/swap-sdk'
 import { ChainMap, ChainTokenList } from './types'
 
 export const ROUTER_ADDRESS: ChainMap<string> = {
-  [ChainId.MAINNET]: '0x54E4b2fc09A3ED428F8c1Adb358c4f2b011AaF8d',
-  [ChainId.TESTNET]: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+  [ChainId.KAI]: '0x54E4b2fc09A3ED428F8c1Adb358c4f2b011AaF8d',
+  [ChainId.BSC]: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
 }
 
 // used for display in the default list when adding liquidity
 // export const SUGGESTED_BASES: ChainTokenList = {
-//   [ChainId.MAINNET]: [WNATIVE[ChainId.MAINNET], GTOKEN[ChainId.MAINNET], USDT[ChainId.MAINNET], USDC[ChainId.MAINNET], DAI_ARB, mainnetTokens.arb, WBTC_ARB],
-//   [ChainId.TESTNET]: [WNATIVE[ChainId.MAINNET], GTOKEN[ChainId.MAINNET], USDT[ChainId.MAINNET], USDC[ChainId.MAINNET], DAI_ARB, mainnetTokens.arb, WBTC_ARB],
+//   [ChainId.KAI]: [WNATIVE[ChainId.KAI], GTOKEN[ChainId.KAI], USDT[ChainId.KAI], USDC[ChainId.KAI], DAI_ARB, mainnetTokens.arb, WBTC_ARB],
+//   [ChainId.BSC]: [WNATIVE[ChainId.KAI], GTOKEN[ChainId.KAI], USDT[ChainId.KAI], USDC[ChainId.KAI], DAI_ARB, mainnetTokens.arb, WBTC_ARB],
 // }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST = {
-  // [ChainId.MAINNET]: [WNATIVE[ChainId.MAINNET], USDC[ChainId.MAINNET], USDT[ChainId.MAINNET], WBTC_ARB],
-  [ChainId.MAINNET]: [],
-  // [ChainId.TESTNET]: [WNATIVE[ChainId.MAINNET], USDC[ChainId.MAINNET], USDT[ChainId.MAINNET], WBTC_ARB],
+  // [ChainId.KAI]: [WNATIVE[ChainId.KAI], USDC[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
+  [ChainId.KAI]: [],
+  // [ChainId.BSC]: [WNATIVE[ChainId.KAI], USDC[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
 }
 
 export const BASES_TO_TRACK_LIQUIDITY_FOR = {
-	// [ChainId.MAINNET]: [USDC[ChainId.MAINNET], WNATIVE[ChainId.MAINNET], USDT[ChainId.MAINNET], WBTC_ARB],
-	[ChainId.MAINNET]: [],
-	// [ChainId.TESTNET]: [USDC[ChainId.MAINNET], WNATIVE[ChainId.MAINNET], USDT[ChainId.MAINNET], WBTC_ARB],
+	// [ChainId.KAI]: [USDC[ChainId.KAI], WNATIVE[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
+	[ChainId.KAI]: [],
+	// [ChainId.BSC]: [USDC[ChainId.KAI], WNATIVE[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
-  [ChainId.MAINNET]: [
-    // [WNATIVE[ChainId.MAINNET], USDC[ChainId.MAINNET]],
-    // [WBTC_ARB, WNATIVE[ChainId.MAINNET]],
-    // [WNATIVE[ChainId.MAINNET], USDT[ChainId.MAINNET]],
+  [ChainId.KAI]: [
+    // [WNATIVE[ChainId.KAI], USDC[ChainId.KAI]],
+    // [WBTC_ARB, WNATIVE[ChainId.KAI]],
+    // [WNATIVE[ChainId.KAI], USDT[ChainId.KAI]],
   ],
-  [ChainId.TESTNET]: [
-    // [WNATIVE[ChainId.MAINNET], USDC[ChainId.MAINNET]],
-    // [WBTC_ARB, WNATIVE[ChainId.MAINNET]],
-    // [WNATIVE[ChainId.MAINNET], USDT[ChainId.MAINNET]],
+  [ChainId.BSC]: [
+    // [WNATIVE[ChainId.KAI], USDC[ChainId.KAI]],
+    // [WBTC_ARB, WNATIVE[ChainId.KAI]],
+    // [WNATIVE[ChainId.KAI], USDT[ChainId.KAI]],
   ],
 }
 

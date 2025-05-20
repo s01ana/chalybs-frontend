@@ -5,8 +5,8 @@ import { Call } from './actions'
 import { RetryableError } from './retry'
 
 const l2DifferentBlockNumberChains = [
-  ChainId.MAINNET,
-  ChainId.TESTNET,
+  ChainId.KAI,
+  ChainId.BSC,
 ]
 
 export type FetchChunkResult = ReturnType<typeof fetchChunk>

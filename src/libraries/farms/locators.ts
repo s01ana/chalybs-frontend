@@ -1,4 +1,4 @@
-import { mainnetTokens } from 'libraries/tokens'
+// import { mainnetTokens } from 'libraries/tokens'
 import { equalsIgnoreCase } from 'utils/equalsIgnoreCase'
 import { FarmData } from './types'
 

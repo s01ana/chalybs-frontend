@@ -12,13 +12,14 @@ export default function useKECPrice() {
 
   useEffect(() => {
     const fetchPrice = async () => {
-      const response = await fetch('https://kecprice.chalybs.net/price')
+      const response = await fetch('https://endpoint.chalybs.net/transaction/kecprice')
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       
       const _data = await response.json();
-      setData(_data.price);
+      console.log(_data.data);
+      setData(_data.data);
     }
     fetchPrice()
   }, [fastRefresh])

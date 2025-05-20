@@ -1,5 +1,5 @@
 import { Currency, CurrencyAmount, Trade, TradeType } from 'libraries/swap-sdk'
-import { GTOKEN, GTOKEN_ARB, USDT, USDT_ARB } from 'libraries/tokens'
+import { GTOKEN, GTOKEN_KAI, USDT } from 'libraries/tokens'
 import tryParseAmount from 'utils/tryParseAmount'
 import { useTradeExactIn, useTradeExactOut } from 'hooks/Trades'
 import { useActiveChainId } from 'hooks/useActiveChainId'
@@ -16,7 +16,7 @@ import { useAccount } from 'wagmi'
 import { useUserSlippage } from 'utils/user'
 import { AppState, useAppDispatch } from '../index'
 import { useCurrencyBalances } from '../wallet/hooks'
-import { Field, replaceSwapState } from './actions'
+import { Field, replaceBridgeState, replaceSwapState } from './actions'
 import { SwapState } from './reducer'
 
 export function useSwapState(): AppState['swap'] {
@@ -187,7 +187,7 @@ export function queryParametersToSwapState(
   let outputCurrency =
     typeof parsedQs.outputCurrency === 'string'
       ? safeGetAddress(parsedQs.outputCurrency) || nativeSymbol
-      : defaultOutputCurrency ?? GTOKEN_ARB.address
+      : defaultOutputCurrency ?? GTOKEN_KAI.address
   if (inputCurrency === outputCurrency) {
     if (typeof parsedQs.outputCurrency === 'string') {
       inputCurrency = ''
@@ -239,6 +239,53 @@ export function useDefaultsFromURLSearch():
     )
 
     setResult({ inputCurrencyId: parsed[Field.INPUT].currencyId, outputCurrencyId: parsed[Field.OUTPUT].currencyId })
+  }, [dispatch, chainId, query, native])
+
+  return result
+}
+
+export function queryParametersToBridgeState(
+  parsedQs: ParsedUrlQuery,
+): SwapState {
+  // let inputCurrency = isAddress(parsedQs.inputCurrency) || (nativeSymbol ?? DEFAULT_INPUT_CURRENCY)
+
+  return {
+    [Field.INPUT]: {
+      currencyId: parsedQs.token ? parsedQs.token.toString() : "USDT",
+    },
+    [Field.OUTPUT]: {
+      currencyId: undefined,
+    },
+    typedValue: parseTokenAmountURLParameter(parsedQs.exactAmount),
+    independentField: parseIndependentFieldURLParameter(parsedQs.exactField),
+    recipient: null,
+  }
+}
+
+export function useDefaultsFromURLSearchBridge():
+  | { inputCurrencyId: string | undefined }
+  | undefined {
+  const { chainId } = useActiveChainId()
+  const dispatch = useAppDispatch()
+  const native = useNativeCurrency()
+  const { query } = useRouter()
+  const [result, setResult] = useState<
+    { inputCurrencyId: string | undefined } | undefined
+  >()
+
+  useEffect(() => {
+    if (!chainId || !native) return
+    const parsed = queryParametersToBridgeState(query)
+
+    dispatch(
+      replaceBridgeState({
+        typedValue: parsed.typedValue,
+        field: parsed.independentField,
+        inputCurrencyId: parsed[Field.INPUT].currencyId,
+      }),
+    )
+
+    setResult({ inputCurrencyId: parsed[Field.INPUT].currencyId })
   }, [dispatch, chainId, query, native])
 
   return result

@@ -6,18 +6,20 @@ import { SettingsMode } from 'components/Menu/GlobalSettings/types'
 import styled from 'styled-components'
 import { SwapFeaturesContext } from '../SwapFeaturesContext'
 
-const ColoredIconButton = styled(IconButton)`
+const ColoredIconButton = styled(IconButton as any)`
   color: ${({ theme }) => theme.colors.textSubtle};
 `
 
 interface Props {
   title: string | ReactElement
+  isSettingDisplayed?: boolean
   isChartDisplayed?: boolean
   setIsChartDisplayed?: (isOpen: boolean) => void | null;
 }
 
 const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
   title,
+  isSettingDisplayed = true,
 }) => {
   const { isChartSupported, isChartDisplayed, setIsChartDisplayed } = useContext(SwapFeaturesContext)
   const toggleChartDisplayed = (a: boolean) => {
@@ -26,7 +28,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
   const titleContent = (
     <Flex width="100%" alignItems="center" justifyContent="space-between" flexDirection="row">
       <Flex>
-        <Text ml="8px" fontSize="18px">{title}</Text>
+        <Text ml="8px" fontSize="18px"><>{title}</></Text>
         {/* <Button
           as={NextLinkFromReactRouter}
           to='/swap'
@@ -56,7 +58,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = ({
         >
           {isChartDisplayed ? <ChartDisableIcon color="textSubtle" /> : <ChartIcon width="24px" color="textSubtle" />}
         </ColoredIconButton> */}
-        <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />
+        {isSettingDisplayed && <GlobalSettings color="textSubtle" mr="0" mode={SettingsMode.SWAP_LIQUIDITY} />}
       </Flex>
     </Flex>
   )

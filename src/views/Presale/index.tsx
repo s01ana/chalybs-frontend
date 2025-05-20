@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 // import { Currency, ERC20Token } from 'libraries/swap-sdk'
-import { mainnetTokens } from 'libraries/tokens'
+import { kaiTokens } from 'libraries/tokens'
 import { Flex, Card, Box, TokenLogo, Text, LinkExternal, CopyButton, Button, AutoRenewIcon, AtomBox, Skeleton } from "components"
 import { ModalInputForTrigger } from "widgets/Modal"
 import { useToast } from 'contexts'
@@ -28,14 +28,14 @@ import { useAccountInfo } from './hooks/useAccountInfo'
 import { usePublicInfo } from './hooks/usePublicInfo'
 import usePresale from './hooks/usePresale'
 
-const StyledAppBody = styled(Card)`
+const StyledAppBody = styled(Card as any)`
   border-radius: 8px;
   width: 100%;
   z-index: 1;
   padding: 1px;
 `
 
-const StyledLogo = styled(TokenLogo)<{ size: string }>`
+const StyledLogo = styled(TokenLogo as any)<{ size: string }>`
   width: ${({ size }) => size};
   height: ${({ size }) => size};
   border-radius: 50%;
@@ -108,7 +108,7 @@ const Presale = () => {
   const [val, setVal] = useState("0");
   const [pendingTx, setPendingTx] = useState(false)
 
-  const tokenSupply = useTotalSupply(mainnetTokens.gtoken)
+  const tokenSupply = useTotalSupply(kaiTokens.gtoken)
 
   const [status, statusText, banText] = getStatus(Number(start), Number(end))
 
@@ -261,14 +261,14 @@ const Presale = () => {
                   <Flex width="100%" justifyContent="space-between" px="5px" mb="10px">
                     <Text small>Token Address</Text>
                     <Flex alignItems="center">
-                      <LinkExternal href={getBlockExploreLink(mainnetTokens.gtoken.address, 'token', chainId)}>
-                        <Text small color="primary">{accountEllipsis(mainnetTokens.gtoken.address)}</Text>
+                      <LinkExternal href={getBlockExploreLink(kaiTokens.gtoken.address, 'token', chainId)}>
+                        <Text small color="primary">{accountEllipsis(kaiTokens.gtoken.address)}</Text>
                       </LinkExternal>
                       <CopyButton 
                         width="16px"
                         ml="5px"
                         buttonColor="textSubtle"
-                        text={mainnetTokens.gtoken.address}
+                        text={kaiTokens.gtoken.address}
                         tooltipMessage='Token address copied'
                       />
                     </Flex>

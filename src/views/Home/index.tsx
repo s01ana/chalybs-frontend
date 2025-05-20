@@ -29,7 +29,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         datasets: [
           {
             label: 'Percent of total supply',
-            data: [89, 5, 5, 1],
+            data: [70, 5, 5, 20],
             backgroundColor: ['#01F4FF', '#2ACCFE', '#43B3FD', '#6F87FC'],
           },
         ],
@@ -60,34 +60,13 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           <div className="row">
             <div className="col-12 promo__content" data-aos="fade-right">
               <h1>
-                Dexfinity Just Entered <span>on Bitfinity Network</span>
+                Chalybs Just Entered <span>on Kai Chain</span>
               </h1>
               <p>
                 The protocol is implemented as a set of persistent, non-upgradable smart contracts; designed to
                 prioritize censorship resistance, security, self-custody, and to function without any trusted
                 intermediaries who may selectively restrict access.
               </p>
-
-              {/* <div className="timer-wrap">
-                <FlipClockCountdown
-                  to={new Date().getTime() + 24 * 3600 * 1000 + 5000}
-                  labels={['DAYS', 'HOURS', 'MINUTES', 'SECONDS']}
-                  labelStyle={{ fontSize: 10, fontWeight: 500, textTransform: 'uppercase' }}
-                  digitBlockStyle={{
-                    width: 40,
-                    height: 60,
-                    fontSize: 30,
-                    color: 'black',
-                    background: '#fffefc',
-                    fontWeight: 700,
-                  }}
-                  dividerStyle={{ color: 'white', height: 0 }}
-                  // separatorStyle={{ color: 'red', size: '6px' }}
-                  duration={0.5}
-                >
-                  Finished
-                </FlipClockCountdown>
-              </div> */}
 
               <div className="promo__btns-wrap">
                 <Button as={NextLinkFromReactRouter} to="/presale" variant="primary" height="60px" px="25px">
@@ -105,49 +84,6 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           <img src="images/home/scroll-down.png" alt="" />
         </div>
       </section>
-      {/* <section className="economy">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 offset-lg-4">
-              <a
-                data-jarallax-element="-40"
-                href="https://www.youtube.com/watch?v=3cZjVFKzugY&list=PLcpkKchW7Xe5K578xRCwQbPbeVQGN5K9h&index=10"
-                className="economy__video-btn video-btn popup-youtube"
-              >
-                <img src="images/home/video-btn.png" alt="" />
-              </a>
-
-              <div className="economy__block">
-                <div className="economy__block-content">
-                  <div className="section-header section-header--white section-header--tire section-header--small-margin">
-                    <h4>decentralised economy</h4>
-                    <h2>
-                      A peer-to-peer platform <span> designed for exchanging cryptocurrencies</span>
-                    </h2>
-                  </div>
-                  <p>
-                  Dexfinity presents itself as a fully developed platform ready to transform the landscape of decentralized exchanges (DEX).
-                  Our platform has been designed to directly address the most significant obstacles in the sector, offering a superior trading experience that focuses on cost reduction, ease of use, and future user education.
-                  </p>
-                  <ul>
-                    <li>
-                      <span>Low transaction fee: </span> Dexfinity has solved it by implementing its operation on the Bitfinity Network.
-                    </li>
-                    <li>
-                      <span>Attractive design: </span> The platform features a visually attractive and easy-to-navigate interface, designed with the end user in mind.
-                    </li>
-                    <li>
-                      <span>Future educational strategy:</span> We plan to establish a strong presence on social media and video platforms like YouTube, 
-                      where we will collaborate with industry influencers to expand our reach.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img src="images/home/video-bg.png" alt="" className="economy__bg" />
-      </section> */}
       <section className="section about" id="about">
         <div className="container">
           <div className="row">
@@ -160,7 +96,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               </div>
               <div className="about__animated-content">
                 <p>
-                  Dexfinity presents itself as a fully developed platform ready to transform the landscape of
+                  Chalybs presents itself as a fully developed platform ready to transform the landscape of
                   decentralized exchanges (DEX). Our platform has been designed to directly address the most significant
                   obstacles in the sector, offering a superior trading experience that focuses on cost reduction, ease
                   of use, and future user education.
@@ -210,7 +146,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   <div data-aos="fade-up" data-aos-delay="600" className="service">
                     <div className="service__bg type_4" />
                     <img src="images/home/service-icon-2.svg" alt="" />
-                    <div className="service__title">Dexfinity Tools</div>
+                    <div className="service__title">Chalybs Tools</div>
                   </div>
                 </div>
               </div>
@@ -256,7 +192,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                       <ul>
                         <li>Create twitter, telegram channels for marketing</li>
                         <li>KYC</li>
-                        <li>Listing on Bitfinity ecosystem</li>
+                        <li>Listing on Kai Chain ecosystem</li>
                         <li>Marketing campaign</li>
                       </ul>
                     </p>
@@ -270,9 +206,9 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                     <p>
                       <ul>
                         <li>Token deploy and Presale launch</li>
-                        <li>Dexfinity Exchange launch</li>
+                        <li>Chalybs Exchange launch</li>
                         <li>Farms and Pools launch</li>
-                        <li>Dexfinity Tools launch</li>
+                        <li>Chalybs Tools launch</li>
                       </ul>
                     </p>
                   </div>
@@ -286,8 +222,8 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                       <ul>
                         <li>Token Launchpad</li>
                         <li>AI chatgpt development for education</li>
-                        <li>Launch a Dexfinity Analytics</li>
-                        <li>Dexfinity API development</li>
+                        <li>Launch a Chalybs Analytics</li>
+                        <li>Chalybs API development</li>
                       </ul>
                     </p>
                   </div>
@@ -299,7 +235,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                     <div className="road__item-title">Jun 2025</div>
                     <p>
                       <ul>
-                        <li>Launch a Dexfinity V3 swap and liquidity</li>
+                        <li>Launch a Chalybs V3 swap and liquidity</li>
                         <li>Build a NFT Marketplace</li>
                         <li>Meme market by bonding curve</li>
                         <li>Build a Metaverse development</li>
@@ -331,7 +267,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 <div className="cases__item-content">
                   <div className="cases__item-title">Exchange</div>
                   <p className="cases__item-text">
-                    Token swaps in Dexfinity are a simple way to trade one ERC-20 token for another. Dexfinity uses an
+                    Token swaps in Chalybs are a simple way to trade one ERC-20 token for another. Chalybs uses an
                     automated market maker mechanism to provide instant feedback on rates and slippage.
                   </p>
                 </div>
@@ -352,42 +288,21 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 <div className="cases__item-content">
                   <div className="cases__item-title">Farming</div>
                   <p className="cases__item-text">
-                    Users play to earn through Farms and Pools which is designed for DEF staking or DEP Lp staking by
-                    DEF token to reward.
+                    Users play to earn through Farms and Pools which is designed for CHL staking or CHL Lp staking by
+                    CHL token to reward.
                   </p>
                 </div>
               </div>
               <div data-aos="fade-left" data-aos-delay="200" className="cases__item">
                 <img src="images/home/cases-icon-1.png" alt="" className="cases__item-icon" />
                 <div className="cases__item-content">
-                  <div className="cases__item-title">Dexfinity Tools</div>
+                  <div className="cases__item-title">Chalybs Tools</div>
                   <p className="cases__item-text">
-                    Dexfinity provides essential tools for crypto users such as Token Creator, Token Multi-sender and
+                  Chalybs provides essential tools for crypto users such as Token Creator, Token Multi-sender and
                     Token Locker.
                   </p>
                 </div>
               </div>
-
-              {/* <div data-aos="fade-right" className="cases__item">
-                <img src="images/home/cases-icon-5.png" alt="" className="cases__item-icon" />
-                <div className="cases__item-content">
-                  <div className="cases__item-title">Dexfinity</div>
-                  <p className="cases__item-text">
-                    Clownfish catfish antenna codlet alfonsino squirrelfish deepwater flathead sea lamprey. Bombay duck
-                    sand goby snake mudhead
-                  </p>
-                </div>
-              </div>
-              <div data-aos="fade-left" data-aos-delay="200" className="cases__item">
-                <img src="images/home/cases-icon-6.png" alt="" className="cases__item-icon" />
-                <div className="cases__item-content">
-                  <div className="cases__item-title">Dexfinity App</div>
-                  <p className="cases__item-text">
-                    Asiatic glassfish pilchard sandburrower, orangestriped triggerfish hamlet Molly Miller trunkfish
-                    spiny dogfish!
-                  </p>
-                </div>
-              </div> */}
             </div>
           </div>
           <div className="row">
@@ -414,42 +329,36 @@ const Home: React.FC<React.PropsWithChildren> = () => {
 
               <ul className="token__info-list">
                 <li>
-                  <span>Token name:</span> Dexfinity Token
+                  <span>Token name:</span> Chalybs Token
                 </li>
                 <li>
-                  <span>Token Symbol:</span> DEF
+                  <span>Token Symbol:</span> CHL
                 </li>
-                {/* <li>
-                  <span>Currency Symbol Image :</span> Currency Symbol Image
-                </li> */}
                 <li>
                   <span>Max Supply:</span> 100,000,000
                 </li>
                 <li>
-                  <span>Initial Supply:</span> 1,000,000
+                  <span>Initial Supply:</span> 20,000,000
                 </li>
                 <li>
-                  <span>Initial Price:</span> 10 BTF
+                  <span>Initial Price:</span> 100 KAI
                 </li>
                 <li>
-                  <span>Effective Emissions:</span> 1 DEF/second
+                  <span>Effective Emissions:</span> 1 CHL/second
                 </li>
-                {/* <li>
-                  <span>Minimum Purchase:</span> 100 Dexfinity
-                </li> */}
               </ul>
 
               <div className="token__desc">
                 <div className="token__desc-title">General description</div>
                 <div className="token__desc-text">
-                  <p>At the heart of the Dexfinity ecosystem lies DEF, the main token that powers the platform.</p>
+                  <p>At the heart of the Chalybs ecosystem lies CHL, the main token that powers the platform.</p>
                   <ul>
                     <li>
-                      By staking DEF, users can earn 100% of protocol revenue and participate in the governance of
-                      Dexfinity
+                      By staking CHL, users can earn 100% of protocol revenue and participate in the governance of
+                      Chalybs
                     </li>
-                    <li>Locking or flexibly staking DEF can result in increased earnings of the token</li>
-                    <li>Earn DEF by farming and staking</li>
+                    <li>Locking or flexibly staking CHL can result in increased earnings of the token</li>
+                    <li>Earn CHL by farming and staking</li>
                   </ul>
                 </div>
               </div>
@@ -487,20 +396,20 @@ const Home: React.FC<React.PropsWithChildren> = () => {
               <p className="chart__text">Token Max Supply - 100,000,000</p>
               <ul className="chart__legend">
                 <li>
-                  <span style={{ width: '289px' }} />
-                  89% Liquidity Incentives
+                  <span style={{ width: '280px' }} />
+                  70% Liquidity Incentives
                 </li>
                 <li>
-                  <span style={{ width: '18px' }} />
+                  <span style={{ width: '20px' }} />
                   5% Team
                 </li>
                 <li>
-                  <span style={{ width: '18px' }} />
+                  <span style={{ width: '20px' }} />
                   5% Treasury + Marketing
                 </li>
                 <li>
-                  <span style={{ width: '4px' }} />
-                  1% Initial Mint
+                  <span style={{ width: '80px' }} />
+                  20% Initial Mint
                 </li>
               </ul>
             </div>
@@ -522,31 +431,31 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             <div className="col-lg-8 offset-lg-2">
               <ul className="accordion">
                 <li>
-                  <a href="/">What is Dexfinity?</a>
+                  <a href="/">What is Chalybs?</a>
                   <p>
-                    The Dexfinity protocol is a peer-to-peer system designed for exchanging cryptocurrencies (ERC-20
-                    Tokens) on the Bitfinity Network blockchain. The protocol is implemented as a set of persistent,
+                    The Chalybs protocol is a peer-to-peer system designed for exchanging cryptocurrencies (ERC-20
+                    Tokens) on the Kai Chain. The protocol is implemented as a set of persistent,
                     non-upgradable smart contracts; designed to prioritize censorship resistance, security,
                     self-custody, and to function without any trusted intermediaries who may selectively restrict
                     access.
                   </p>
                 </li>
                 <li>
-                  <a href="/">How Dexfinity works?</a>
+                  <a href="/">How Chalybs works?</a>
                   <p>
-                    Dexfinity is an automated liquidity protocol powered by a constant product formula and implemented
-                    in a system of non-upgradeable smart contracts on the Bitfinity network. It obviates the need for
+                  Chalybs is an automated liquidity protocol powered by a constant product formula and implemented
+                    in a system of non-upgradeable smart contracts on the  Kai Chain. It obviates the need for
                     trusted intermediaries, prioritizing decentralization, censorship resistance, and security.
                   </p>
                 </li>
                 <li>
-                  <a href="/">What is DEF?</a>
-                  <p>At the heart of the Dexfinity ecosystem lies DEF, the main token that powers the platform.</p>
+                  <a href="/">What is CHL?</a>
+                  <p>At the heart of the Chalybs ecosystem lies CHL, the main token that powers the platform.</p>
                 </li>
                 <li>
                   <a href="/">How does swap work?</a>
                   <p>
-                    Token swaps in Dexfinity are a simple way to trade one ERC-20 token for another. For end-users,
+                    Token swaps in Chalybs are a simple way to trade one ERC-20 token for another. For end-users,
                     swapping is intuitive: a user picks an input token and an output token. They specify an input
                     amount, and the protocol calculates how much of the output token they’ll receive. They then execute
                     the swap with one click, receiving the output token in their wallet immediately.
@@ -555,7 +464,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                 <li>
                   <a href="/">What is Pools?</a>
                   <p>
-                    Each Dexfinity liquidity pool is a trading venue for a pair of ERC20 tokens. When a pool contract is
+                    Each Chalybs liquidity pool is a trading venue for a pair of ERC20 tokens. When a pool contract is
                     created, its balances of each token are 0; in order for the pool to begin facilitating trades,
                     someone must seed it with an initial deposit of each token. This first liquidity provider is the one
                     who sets the initial price of the pool. They are incentivized to deposit an equal value of both
@@ -575,7 +484,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           <div className="row">
             <div className="col-lg-4">
               <img className="logo__img logo__img--big" src="/images/logo.png" alt="" />
-              <div className="copyright">© 2024, Dexfinity </div>
+              <div className="copyright">© 2025, Chalybs </div>
             </div>
             <div className="col-lg-4">
               <div className="social-block">
@@ -592,12 +501,6 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                     <a href="https://t.me/+fDl9tssNdvk0N2Rh" className="social-list__link">
                       {/* <img src="images/home/telegram.png" width={32}/> */}
                       <TelegramIcon />
-                    </a>
-                  </li>
-                  <li className="social-list__item" style={{paddingTop: "6px"}}>
-                    <a href="https://discord.gg/ySugAwJD7D" className="social-list__link">
-                      {/* <img src="images/home/telegram.png" width={32}/> */}
-                      <DiscordIcon />
                     </a>
                   </li>
                   <li className="social-list__item">
@@ -617,9 +520,6 @@ const Home: React.FC<React.PropsWithChildren> = () => {
                   <Button variant="primary" height="55px" px="25px">
                     <Text color="background">Send</Text>
                   </Button>
-                  {/* <button className="form__btn btn btn--uppercase btn--orange btn--small">
-                    <span>Send</span>
-                  </button> */}
                 </div>
               </form>
             </div>
