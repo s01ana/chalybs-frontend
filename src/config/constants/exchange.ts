@@ -1,6 +1,6 @@
 import { ChainId } from "config/chains"
 import { Percent, Token, WNATIVE } from 'libraries/swap-sdk'
-// import { USDC, USDT, WBTC_ARB, mainnetTokens, DAI_ARB, GTOKEN} from 'libraries/tokens'
+import { GTOKEN, USDT } from "libraries/tokens"
 import { ChainMap, ChainTokenList } from './types'
 
 export const ROUTER_ADDRESS: ChainMap<string> = {
@@ -17,21 +17,21 @@ export const ROUTER_ADDRESS: ChainMap<string> = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST = {
   // [ChainId.KAI]: [WNATIVE[ChainId.KAI], USDC[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
-  [ChainId.KAI]: [],
+  [ChainId.KAI]: [WNATIVE[ChainId.KAI], USDT[ChainId.KAI], GTOKEN[ChainId.KAI]],
   // [ChainId.BSC]: [WNATIVE[ChainId.KAI], USDC[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
 }
 
 export const BASES_TO_TRACK_LIQUIDITY_FOR = {
 	// [ChainId.KAI]: [USDC[ChainId.KAI], WNATIVE[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
-	[ChainId.KAI]: [],
+	[ChainId.KAI]: [WNATIVE[ChainId.KAI], USDT[ChainId.KAI], GTOKEN[ChainId.KAI]],
 	// [ChainId.BSC]: [USDC[ChainId.KAI], WNATIVE[ChainId.KAI], USDT[ChainId.KAI], WBTC_ARB],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.KAI]: [
-    // [WNATIVE[ChainId.KAI], USDC[ChainId.KAI]],
-    // [WBTC_ARB, WNATIVE[ChainId.KAI]],
-    // [WNATIVE[ChainId.KAI], USDT[ChainId.KAI]],
+    [WNATIVE[ChainId.KAI], USDT[ChainId.KAI]],
+    [GTOKEN[ChainId.KAI], WNATIVE[ChainId.KAI]],
+    [WNATIVE[ChainId.KAI], GTOKEN[ChainId.KAI]],
   ],
   [ChainId.BSC]: [
     // [WNATIVE[ChainId.KAI], USDC[ChainId.KAI]],

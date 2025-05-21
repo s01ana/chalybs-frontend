@@ -12,7 +12,7 @@ export const GTOKEN_KAI = new ERC20Token(
 
 export const USDT_KAI = new ERC20Token(
   ChainId.KAI,
-  '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
+  '0xDdC7b191BDa1815e9884209E16bEBf92aF27C75b',
   18,
   'USDT',
   'KRC20 USD',

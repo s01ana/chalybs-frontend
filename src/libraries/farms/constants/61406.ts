@@ -19,10 +19,10 @@ const farms: SerializedFarmConfig[] = [
   },
   // {
   //   pid: 2,
-  //   lpSymbol: 'DEF-USDT LP',
-  //   lpAddress: '0x1e7F25Af19DD9c3229d43041867c2924af6dd304',
-  //   quoteToken: mainnetTokens.usdt,
-  //   token: mainnetTokens.gtoken,
+  //   lpSymbol: 'CHL-USDT LP',
+  //   lpAddress: '0x21191dB33F160dEe11032ec87131c12eA9a5E41a',
+  //   quoteToken: kaiTokens.usdt,
+  //   token: kaiTokens.gtoken,
   // },
   // {
   //   pid: 3,

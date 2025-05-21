@@ -18,7 +18,6 @@ export default function useKECPrice() {
       }
       
       const _data = await response.json();
-      console.log(_data.data);
       setData(_data.data);
     }
     fetchPrice()

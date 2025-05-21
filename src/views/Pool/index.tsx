@@ -13,7 +13,7 @@ import CurrencyInputHeader from 'views/Swap/components/CurrencyInputHeader'
 import { BitfinityBridgeBox } from 'views/Swap/components/styleds'
 
 const Body = styled.div`
-  border: 1px solid ${({theme}) => theme.colors.input};
+  border: 1px solid ${({theme}) => theme.colors.cardBorder};
 	border-radius: 8px;
 `
 
