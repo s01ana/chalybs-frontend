@@ -2,21 +2,21 @@ import { kaiTokens } from 'libraries/tokens'
 import { SerializedFarmConfig } from '..'
 
 const farms: SerializedFarmConfig[] = [
-  {
-    pid: 0,
-    lpSymbol: 'CHL',
-    lpAddress: '0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6',
-    quoteToken: kaiTokens.wkec,
-    token: kaiTokens.gtoken,
-    isTokenOnly: true,
-  },
-  {
-    pid: 1,
-    lpSymbol: 'CHL-KEC LP',
-    lpAddress: '0x2F1EE874Cf53F0A3565c67F96FbA7699eE78b0dF',
-    quoteToken: kaiTokens.wkec,
-    token: kaiTokens.gtoken,
-  },
+  // {
+  //   pid: 0,
+  //   lpSymbol: 'CHL',
+  //   lpAddress: '0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6',
+  //   quoteToken: kaiTokens.wkec,
+  //   token: kaiTokens.gtoken,
+  //   isTokenOnly: true,
+  // },
+  // {
+  //   pid: 1,
+  //   lpSymbol: 'CHL-KEC LP',
+  //   lpAddress: '0x2F1EE874Cf53F0A3565c67F96FbA7699eE78b0dF',
+  //   quoteToken: kaiTokens.wkec,
+  //   token: kaiTokens.gtoken,
+  // },
   // {
   //   pid: 2,
   //   lpSymbol: 'CHL-USDT LP',
@@ -87,7 +87,8 @@ const farms: SerializedFarmConfig[] = [
   //   quoteToken: mainnetTokens.usdt,
   //   token: mainnetTokens.arb,
   // },
-  ].map((p) => ({ ...p, lpAddress: p.lpAddress as `0x${string}`, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
+  // ].map((p) => ({ ...p, lpAddress: p.lpAddress as `0x${string}`, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
+  ]
 // ]
 
 export default farms

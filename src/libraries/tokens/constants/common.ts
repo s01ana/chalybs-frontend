@@ -3,7 +3,7 @@ import { ERC20Token } from 'libraries/swap-sdk'
 
 export const GTOKEN_KAI = new ERC20Token(
   ChainId.KAI,
-  '0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6',
+  '0x93610c31D03384dD001Ef62c096866d97Fec3aB2',
   18,
   'CHL',
   'Chalybs Token',
