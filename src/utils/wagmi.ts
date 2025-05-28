@@ -16,7 +16,7 @@ export const noopStorage = {
 const metadata = {
   name: 'Chalybs Finance',
   description: 'Chalybs Finance offers Swap, Liquidity, Farms, Pools on KaiChain.',
-  url: 'https://chalybs.finance', // origin must match your domain & subdomain
+  url: 'https://chalybs.net', // origin must match your domain & subdomain
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
 

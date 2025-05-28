@@ -50,7 +50,7 @@ const config: (
         // },
         {
           label: 'Docs',
-          href: 'https://docs.chalybs.finance/',
+          href: 'https://docs.chalybs.net/',
           type: DropdownMenuItemType.EXTERNAL_LINK
         },
       ].map((item) => addMenuItemSupported(item, chainId)),

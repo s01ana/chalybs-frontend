@@ -7,7 +7,7 @@ export const GTOKEN_KAI = new ERC20Token(
   18,
   'CHL',
   'Chalybs Token',
-  'https://chalybs.finance/',
+  'https://chalybs.net/',
 )
 
 export const USDT_KAI = new ERC20Token(
