@@ -109,9 +109,9 @@ const getLpTokenPrice = (
   }
 
   return lpTokenPrice
-} 
+}
 
-const getFarmsPrices = (farms: SerializedFarm[], chainId: number, bnbPrice: number) => {
+const getFarmsPrices = (farms: SerializedFarm[], chainId: number) => {
   if (!nativeStableLpMap[chainId]) {
     throw new Error(`chainId ${chainId} not supported`)
   }
@@ -119,19 +119,16 @@ const getFarmsPrices = (farms: SerializedFarm[], chainId: number, bnbPrice: numb
   const nativeStableFarm = farms.find(
     (farm) => farm.lpAddress.toLowerCase() === nativeStableLpMap[chainId].address.toLowerCase(),
   )
-
-  // const nativePriceUSD = nativeStableFarm?.tokenPriceVsQuote ? BIG_ONE.div(nativeStableFarm?.tokenPriceVsQuote || '0') : BIG_ZERO
-  const nativePriceUSD = new BigNumber(bnbPrice)
+  const nativePriceUSD = nativeStableFarm?.tokenPriceVsQuote ? BIG_ONE.div(nativeStableFarm?.tokenPriceVsQuote || '0') : BIG_ZERO
   const farmsWithPrices = farms.map((farm) => {
     const { wNative, stable } = nativeStableLpMap[chainId]
-    const quoteTokenFarm = farm.isTokenOnly ? farms.filter((farm1) => farm1.pid === 1)[0] : (
+    const quoteTokenFarm = farm.isTokenOnly ? farms.filter((farm1) => farm1.pid === 2)[0] : (
       farm.quoteToken.symbol !== stable && farm.quoteToken.symbol !== wNative
         ? getFarmFromTokenSymbol(farms, farm.quoteToken.symbol, [wNative, stable])
         : null)
-    
-    const tokenPriceBusd = farm.isTokenOnly ? new BigNumber(quoteTokenFarm?.tokenPriceVsQuote || '0').times(nativePriceUSD) : getFarmBaseTokenPrice(farm, quoteTokenFarm, nativePriceUSD, wNative, stable)
+    const tokenPriceBusd = farm.isTokenOnly ? new BigNumber(quoteTokenFarm?.tokenPriceVsQuote || '0') : getFarmBaseTokenPrice(farm, quoteTokenFarm, nativePriceUSD, wNative, stable)
     const quoteTokenPriceBusd = getFarmQuoteTokenPrice(farm, quoteTokenFarm, nativePriceUSD, wNative, stable)
-    const lpTokenPriceBusd = farm.isTokenOnly ? new BigNumber(quoteTokenFarm?.tokenPriceVsQuote || '0').times(nativePriceUSD) : getLpTokenPrice(farm, tokenPriceBusd)
+    const lpTokenPriceBusd = farm.isTokenOnly ? new BigNumber(quoteTokenFarm?.tokenPriceVsQuote || '0') : getLpTokenPrice(farm, tokenPriceBusd)
 
     return {
       ...farm,
@@ -148,9 +145,9 @@ export default getFarmsPrices
 
 const nativeStableLpMap = {
   [ChainId.KAI]: {
-    address: '0xd04Bc65744306A5C149414dd3CD5c984D9d3470d',
+    address: '0x92fCe3C6A8289F5c57eD813B541FcF18ADFaB458',
     wNative: 'WKEC',
-    stable: 'CHL',
+    stable: 'USDT',
   },
   [ChainId.BSC]: {
     address: '0xd04Bc65744306A5C149414dd3CD5c984D9d3470d',

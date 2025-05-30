@@ -2,28 +2,35 @@ import { kaiTokens } from 'libraries/tokens'
 import { SerializedFarmConfig } from '..'
 
 const farms: SerializedFarmConfig[] = [
-  // {
-  //   pid: 0,
-  //   lpSymbol: 'CHL',
-  //   lpAddress: '0x2673C91f6a8DcDe1E242AB51850e5352d558BEF6',
-  //   quoteToken: kaiTokens.wkec,
-  //   token: kaiTokens.gtoken,
-  //   isTokenOnly: true,
-  // },
-  // {
-  //   pid: 1,
-  //   lpSymbol: 'CHL-KEC LP',
-  //   lpAddress: '0x2F1EE874Cf53F0A3565c67F96FbA7699eE78b0dF',
-  //   quoteToken: kaiTokens.wkec,
-  //   token: kaiTokens.gtoken,
-  // },
-  // {
-  //   pid: 2,
-  //   lpSymbol: 'CHL-USDT LP',
-  //   lpAddress: '0x21191dB33F160dEe11032ec87131c12eA9a5E41a',
-  //   quoteToken: kaiTokens.usdt,
-  //   token: kaiTokens.gtoken,
-  // },
+  {
+    pid: 0,
+    lpSymbol: 'CHL',
+    lpAddress: '0x93610c31D03384dD001Ef62c096866d97Fec3aB2',
+    quoteToken: kaiTokens.wkec,
+    token: kaiTokens.gtoken,
+    isTokenOnly: true,
+  },
+  {
+    pid: 1,
+    lpSymbol: 'CHL-KEC LP',
+    lpAddress: '0xA99f447C4f7b41ea2262A183351a9Ee28C0CCD96',
+    quoteToken: kaiTokens.wkec,
+    token: kaiTokens.gtoken,
+  },
+  {
+    pid: 2,
+    lpSymbol: 'CHL-USDT LP',
+    lpAddress: '0x300fA31c95Ba213aD997C42Cb663f9C66fDb26fC',
+    quoteToken: kaiTokens.usdt,
+    token: kaiTokens.gtoken,
+  },
+  {
+    pid: 3,
+    lpSymbol: 'KEC-USDT LP',
+    lpAddress: '0x92fCe3C6A8289F5c57eD813B541FcF18ADFaB458',
+    quoteToken: kaiTokens.usdt,
+    token: kaiTokens.wkec,
+  },
   // {
   //   pid: 3,
   //   lpSymbol: 'DEF-USDC LP',
@@ -87,8 +94,6 @@ const farms: SerializedFarmConfig[] = [
   //   quoteToken: mainnetTokens.usdt,
   //   token: mainnetTokens.arb,
   // },
-  // ].map((p) => ({ ...p, lpAddress: p.lpAddress as `0x${string}`, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
-  ]
-// ]
+  ].map((p) => ({ ...p, lpAddress: p.lpAddress as `0x${string}`, token: p.token.serialize, quoteToken: p.quoteToken.serialize }))
 
 export default farms

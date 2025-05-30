@@ -30,12 +30,12 @@ const fetchFarmPublicData = async ({ pids, chainId }): Promise<[SerializedFarm[]
     fetchMasterChefTokenPerTime(chainId)
   ])
 
-  const response = await fetch('https://endpoint.chalybs.net/transaction/kecprice')
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
+  // const response = await fetch('https://endpoint.chalybs.net/transaction/kecprice')
+  // if (!response.ok) {
+  //   throw new Error(`HTTP error! status: ${response.status}`);
+  // }
   
-  const _data = await response.json();
+  // const _data = await response.json();
 
   const poolLengthAsBigNumber = new BigNumber(poolLength.toString())
   const regularTokenPerTime = getBalanceAmount(new BigNumber(tokenPerTime.toString()))
@@ -45,7 +45,7 @@ const fetchFarmPublicData = async ({ pids, chainId }): Promise<[SerializedFarm[]
   )
   // const priceHelperLpsConfig = getFarmsPriceHelperLpFiles(chainId)
   const farms = await fetchFarms(farmsCanFetch, chainId)
-  const farmsWithPrices = farms.length > 0 ? getFarmsPrices(farms, chainId, _data.data) : []
+  const farmsWithPrices = farms.length > 0 ? getFarmsPrices(farms, chainId) : []
   return [farmsWithPrices, poolLengthAsBigNumber.toNumber(), regularTokenPerTime.toNumber()]
 }
 

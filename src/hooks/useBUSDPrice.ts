@@ -37,7 +37,7 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
   )
   const [[bnbPairState, bnbPair], [busdPairState, busdPair], [busdBnbPairState, busdBnbPair]] = usePairs(tokenPairs)
 
-  const {data: kecPrice} = useKECPrice()
+  // const {data: kecPrice} = useKECPrice()
 
   return useMemo(() => {
     if (!currency || !wrapped || !chainId || !wnative) {
@@ -98,11 +98,11 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
       }
     }
 
-    if (isBnbPairExist && kecPrice) {
-      const currencyBnbPrice = bnbPair.priceOf(wnative)
-      const price = currencyBnbPrice.multiply(new Price(wrapped, stable, BigInt(1e18), BigInt(Math.round(kecPrice*1e18))))
-      return new Price(currency, stable, price.denominator, price.numerator)
-    }
+    // if (isBnbPairExist && kecPrice) {
+    //   const currencyBnbPrice = bnbPair.priceOf(wnative)
+    //   const price = currencyBnbPrice.multiply(new Price(wrapped, stable, BigInt(1e18), BigInt(Math.round(kecPrice*1e18))))
+    //   return new Price(currency, stable, price.denominator, price.numerator)
+    // }
 
     return undefined
   }, [
@@ -117,7 +117,7 @@ export default function useBUSDPrice(currency?: Currency): Price<Currency, Curre
     busdPair,
     bnbPairState,
     busdBnbPairState,
-    kecPrice
+    // kecPrice
   ])
 }
 
