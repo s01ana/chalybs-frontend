@@ -2,7 +2,7 @@ import { ChainId } from 'config/chains'
 
 export default {
   masterChef: {
-    [ChainId.KAI]: '0xF903994C7dc756A7086C37e2ec429bac5ae7d9F8',
+    [ChainId.KAI]: '0x3e8b72AF958Ebfb3fbC0063E39C6fe2D79bC2b02',
   },
   multiCall: {
     [ChainId.KAI]: '0x8E92A01668A326e45ffaD7857877D592e28d76d7',
