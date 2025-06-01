@@ -90,7 +90,7 @@ function MyApp(props: AppProps<{ initialReduxState: any; dehydratedState: any }>
           // eslint-disable-next-line @next/next/no-sync-scripts
           <script src="https://public.bnbstatic.com/static/js/mp-webview-sdk/webview-v1.0.0.min.js" id="mp-webview" />
         )}
-        <link rel="stylesheet" href="/main.css" />
+        {/* <link rel="stylesheet" href="/main.css" /> */}
       </Head>
       <DefaultSeo {...SEO} />
       <Providers store={store} dehydratedState={pageProps.dehydratedState}>

@@ -223,6 +223,7 @@ const Farms = () => {
     stakedInactiveFarms,
     stakedOnly,
     stakedOnlyFarms,
+    tokenMode
   ])
 
   const chosenFarmsMemoized = useMemo(() => {
