@@ -106,7 +106,7 @@ const DataRow: React.FC<React.PropsWithChildren<{ data: any}>> = ({ data }) => {
             <ChainLogo chainId={data.sourcechain} width={16} height={16} />
           </StyledChainLogo>
         </Flex>
-        →
+        <Text>→</Text>
         <Flex position="relative">
           <StyledLogo size="32px" srcs={[`/images/${data.targetchain}/tokens/${targetPool?.[0]}.png`]} alt='usdt' />
           <StyledChainLogo>
