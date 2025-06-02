@@ -3,11 +3,8 @@ import { Dispatch, Fragment, SetStateAction } from "react";
 import { ArrowBackIcon, ArrowForwardIcon, Button, Flex, NextLinkFromReactRouter, Text, LinkExternal, TokenLogo, Box } from "components";
 import { ChainLogo } from 'components/Logo/ChainLogo'
 import styled from "styled-components";
-import { useActiveChainId } from 'hooks/useActiveChainId'
 import { getBlockExploreLink } from 'utils'
 import Divider from "components/Divider";
-import { CurrencyLogo } from "components/Logo";
-import { useCurrency, useCurrencyBridge } from "hooks/Tokens";
 import useBridgePool from "hooks/useBridgePool";
 
 const ResponsiveGrid = styled.div`
@@ -19,9 +16,22 @@ const ResponsiveGrid = styled.div`
 
   grid-template-columns: 4fr 4fr 3fr 4fr 4fr 1.5fr;
 
+  @media screen and (max-width: 898px) {
+    grid-template-columns: 4fr 4fr 3fr 4fr 4fr;
+    & > *:nth-child(6) {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: 670px) {
-    grid-template-columns: 3fr 1fr 1fr;
-    & > *:nth-child(3) {
+    grid-template-columns: 4fr 4fr 3fr;
+    & > *:nth-child(4) {
+      display: none;
+    }
+    & > *:nth-child(5) {
+      display: none;
+    }
+    & > *:nth-child(6) {
       display: none;
     }
   }
